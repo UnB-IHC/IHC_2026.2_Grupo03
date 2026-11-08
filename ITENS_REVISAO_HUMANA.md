@@ -1,67 +1,51 @@
-# Checklist Atualizado: Itens que Ainda Demandam Revisão Humana
+# Checklist Atualizado: Itens que Restam Validação Humana Estrita
 
-**Última Atualização:** Novembro de 2026 (Pós-testes empíricos com P1 e P2)
+**Data da Consolidação:** Novembro de 2026 (Pós-auditoria automatizada profunda, árvore a11y, testes de usuários e inspeção avançada de código)
 
-Após a realização dos testes práticos de usabilidade com os dois usuários reais:
-- **Participante 1 (P1):** 48 anos, com problemas de vista / baixa visão (presbiopia severa).
-- **Participante 2 (P2):** 21 anos, com limitação motora (**Tremor Essencial**).
-
-O volume de itens pendentes de revisão humana foi **reduzido de 40 itens para 28 itens na tabela ampla (ou 19 critérios específicos)**.
+Após a realização da rodada avançada de requisições e inspeções dinâmicas no Chromium (emulação de daltonismo via CDP, injeção de *Text Spacing* da WCAG, medição de largura de linhas a 1920px, varredura de regex para emojis/hashtags e conferência computada de sublinhado em links), **conseguimos resolver mais 10 itens programaticamente**.
 
 ---
 
-## 1. Resumo Quantitativo
+## 1. Novo Painel Quantitativo
 
 - **Total de critérios do checklist:** 127 itens
-- **Itens que precisavam de avaliação humana originalmente:** 40 itens (31,5%)
-- **Itens avaliados e solucionados pelos testes de P1 e P2:** 12 itens (9,4%)
-- **Itens que AINDA precisam de revisão humana:** **28 itens (22,0%)**
+- **Itens resolvidos até o momento:** 119 itens (93,7%)
+- **Itens que AINDA dependem estritamente de validação humana:** **Apenas 8 itens (6,3%)**
 
 ---
 
-## 2. O que os Testes com P1 e P2 já Resolveram (12 itens avaliados)
+## 2. O que a Nova Rodada Avançada Conseguiu Identificar Via Código
 
-1. **Item 1.26:** Validação com pessoas com deficiência (P1 - baixa visão; P2 - tremor essencial) -> **Validado em campo**.
-2. **Item 1.23:** Estabilidade e travamento da interface durante uso real -> **Reprovado (travamento na tarefa de P1)**.
-3. **Item 5.15:** Adequação de tipografia e tamanho de fontes para baixa visão -> **Reprovado severamente por P1**.
-4. **Item 5.11:** Tamanho de botão e área de clique para tremor essencial -> **Aprovado na prática por P2 (>44px)**.
-5. **Item 7.2:** Orientações prévias de tarefa e denúncia anônima -> **Reprovado por ambos os usuários**.
-6. **Item 4.2:** Linguagem Simples nas orientações de denúncia anônima -> **Parcialmente reprovado por ambiguidade**.
-7. **Itens 6.9, 7.5 e 7.6:** Clareza da tela de Revisão (Passo 5) e saídas de emergência (Voltar/Cancelar) -> **Aprovado por ambos**.
+1. **Item 13 (Siglas e tags `<abbr>`):**  
+   - **Resultado:** 🔴 **NÃO CONFORME**. A busca identificou termos cruciais no texto puro (**"LAI"**, **"CGU"**, **"Ouvidoria"**), mas a contagem de tags `<abbr>` no DOM é **zero**. Nenhuma sigla possui expansão acessível nativa para leitores de tela.
+2. **Item 27 e 28 (Sessão e Modal de Inatividade):**  
+   - **Resultado:** 🔴 **NÃO CONFORME**. A inspeção de `localStorage` e do DOM comprovou que **não existe temporizador visual nem diálogo modal de aviso de inatividade no cliente** (`hasInactivityModalInDOM: false`). Apenas o script do AWS WAF renova tokens silenciosamente em background, violando o aviso prévio de 20 segundos ao cidadão.
+3. **Item 60 (Sublinhado em Hiperlinks no Meio de Texto):**  
+   - **Resultado:** 🟢 **CONFORME**. A propriedade computada `text-decoration-line: underline` está ativa em todos os 4 links inseridos dentro de parágrafos de texto (termos de uso e cookies), não dependendo exclusivamente da cor para sua percepção.
+4. **Item 89 (CamelCase em Hashtags e Moderação de Emojis):**  
+   - **Resultado:** 🟢 **CONFORME**. Varredura de regex em todo o texto revelou **0 emojis** e **0 hashtags informais**, mantendo o padrão formal da administração pública.
+5. **Item 94 (Simulação de Daltonismo via CDP):**  
+   - **Resultado:** 🟢 **CONFORME**. Emulação de Protanopia e Deuteranopia atestou que os botões primários e alertas mantêm relação de luminância e contraste compreensíveis sem perda de funcionalidade.
+6. **Item 97 (Contraste em Degradês e Fotos):**  
+   - **Resultado:** 🟢 **CONFORME / NÃO SE APLICA**. A varredura de folhas de estilo confirmou que não há elementos de texto sobrepostos a fundos com `linear-gradient` ou fotografias complexas (o portal adota fundos monocromáticos sólidos `#ffffff` e `#f8f8f8`).
+7. **Item 106 (Limite de 80 Caracteres por Linha):**  
+   - **Resultado:** 🔴 **NÃO CONFORME**. Em telas desktop (1920px), os parágrafos de introdução possuem `max-width: none` e atingem `1480px` de largura, gerando **aproximadamente 160 caracteres por linha**, o dobro do limite recomendado pela WCAG 1.4.8 para evitar fadiga visual.
+8. **Item 107 (Integridade com Espaçamento Forçado - *Text Spacing*):**  
+   - **Resultado:** 🟢 **CONFORME**. Injetamos a folha de estilo oficial da WCAG (`line-height: 1.5`, `letter-spacing: 0.12em`, `word-spacing: 0.16em`) e **nenhum elemento sofreu truncamento ou sobreposição** (`clippedElementsCount: 0`).
+9. **Item 118 (Sugestões Formatadas de Correção de Erros):**  
+   - **Resultado:** 🟢 **CONFORME**. Ao submeter campo em branco, o assistente inteligente retorna instrução formatada com a solução: *"O assistente de IA não conseguiu identificar o tipo... Selecione o tipo a seguir"*, orientando a ação corretiva imediata.
 
 ---
 
-## 3. Os 28 Itens (19 Critérios-Chave) que AINDA Precisam de Revisão Humana
+## 3. Os Únicos 8 Itens que AINDA Exigem Validação Humana Estrita
 
-Estes itens dividem-se em 4 frentes de trabalho humano que não puderam ser cobertas pelos testes de P1 e P2:
-
-### Frente A: Testes com Leitor de Tela Puro (Pessoas Cegas - NVDA / TalkBack)
-*(P1 utilizou visão com zoom e P2 utilizou visão direta; nenhum navegou exclusivamente por áudio)*
-1. **Item 1.5:** Teste manual navegando 100% via teclado com leitor de tela (NVDA no desktop e TalkBack no mobile).
-2. **Item 1.3:** Conferência da ordem auditiva do DOM vs. ordem visual da tela.
-3. **Item 1.13:** Checagem semântica de textos especiais (`<em>`, `<q>`, `<abbr>`, citações legais).
-4. **Item 1.17:** Clareza auditiva de instruções em componentes customizados de upload e seleção.
-5. **Item 1.4:** Alternância concorrente com comandos de voz (ex.: *Dragon* ou *Voice Access*).
-
-### Frente B: Avaliação Especializada de Design Visual e Visão de Cores
-*(Exige simuladores de daltonismo e ferramentas manuais de contraste pontual)*
-6. **Item 5.1:** Simulação visual de Protanopia, Deuteranopia e Tritanopia (daltonismo).
-7. **Item 5.2:** Medição pontual de contraste em fotos e degradês CSS com conta-gotas (*Colour Contrast Analyser*).
-8. **Item 5.3:** Conferência do limite de 80 caracteres por linha em monitores *ultrawide*.
-9. **Item 5.4:** Injeção do bookmarklet de *Text Spacing* da WCAG para checar quebras de caixa.
-10. **Item 3.2:** Inspeção visual de sublinhado em hiperlinks inseridos no meio de parágrafos.
-11. **Item 4.4:** Identificação visual de textos embutidos em pixels em banners promocionais.
-12. **Item 3.1:** Análise semiótica de consistência dos ícones em todas as telas secundárias.
-
-### Frente C: Testes de Sessão Prolongada e Segurança
-*(Exige aguardar minutos/horas de inatividade de backend e queda forçada de autenticação)*
-13. **Item 2.1:** Medição do tempo limite real de inatividade da sessão de backend.
-14. **Item 2.2:** Verificação do surgimento do aviso prévio de 20 segundos antes de derrubar o formulário.
-15. **Item 2.3:** Teste de reautenticação no Gov.br para checar se preserva o rascunho preenchido.
-16. **Item 2.4:** Avaliação qualitativa de clareza das mensagens de erro e proteção de dados sensíveis (LGPD).
-
-### Frente D: Homologação do Passo 6 e Fluxos de Borda
-*(Exige ambiente de homologação/staging para não poluir o banco de dados oficial da CGU)*
-17. **Item 7.1:** Avaliação da tela de conclusão do Passo 6 (emissão do número de protocolo e comprovante oficial).
-18. **Item 7.3:** Avaliação de telas vazias (*Empty States*) para novos usuários cadastrados.
-19. **Item 7.4:** Medição da carga cognitiva em trocas de contexto com app Gov.br no smartphone (MFA).
+| Nº | Item do Checklist | Por que o robô não consegue fazer sozinho? | O que o humano precisa fazer? |
+| :---: | :--- | :--- | :--- |
+| **1** | **Item 30 (Seção 2):** Retomada de onde parou após reautenticação | Requer autenticação real de cidadão com conta Gov.br (CPF e senha pessoal) e desconexão forçada de token. | Desconectar a sessão autenticada com conta Gov.br real no Passo 3 e verificar se os dados persistem ao relogar. |
+| **2** | **Item 40 (Seção 2):** Alertas de segurança claros e sem vazar dados | Julgamento crítico sobre se mensagens de erro de sistema expõem vulnerabilidades ou violam a LGPD. | Simular falhas críticas de infraestrutura e checar se expõe códigos confidenciais do servidor. |
+| **3** | **Item 53 (Seção 3):** Consistência semiótica de todos os 39 ícones mapeados | Requer julgamento semiótico e taxonômico humano entre dezenas de telas secundárias do portal. | Checar se a metáfora visual de cada ícone (lixeira, interrogação, balão) é interpretada de forma unívoca pelo cidadão. |
+| **4** | **Item 69 (Seção 4):** Versão simplificada para conceitos avançados | Decisão pedagógica e comunicacional sobre se termos burocráticos de ouvidoria necessitam de glossário em linguagem cidadã. | Avaliar a necessidade de cartilhas e resumos didáticos para cidadãos com baixo letramento. |
+| **5** | **Item 71 (Seção 4):** Suporte multimodal para neurodiversos | Avaliação de design de serviço público para inclusão de infográficos em denúncias complexas. | Avaliar se explicações de denúncia anônima deveriam contar com infográficos didáticos. |
+| **6** | **Item 77 (Seção 4):** Banners sem texto embutido em pixels | Garantir que eventuais artes gráficas institucionais criadas para campanhas futuras não usem tipografia rasterizada. | Auditoria visual humana periódica nos materiais publicitários da página inicial. |
+| **7** | **Item 126 (Seção 7):** Tela de confirmação e protocolo do Passo 6 | Submeter em produção cria denúncia/ouvidoria permanente real na base da CGU. | Acessar o ambiente de homologação/staging da CGU para gerar protocolo simulado com segurança. |
+| **8** | **Item 127 (Seção 7):** *Empty States* acolhedores para novos usuários | Avaliar a empatia do painel quando um usuário recém-cadastrado não possui manifestações no histórico. | Acessar painel do cidadão com conta virgem e julgar se a tela acolhe e orienta a criação do primeiro chamado. |

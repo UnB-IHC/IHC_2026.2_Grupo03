@@ -36,15 +36,16 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 
 | Status do Critério | Quantidade de Itens | Percentual | Descrição |
 | :--- | :---: | :---: | :--- |
-| 🟢 **Conforme (Aprovado)** | **42** | 33,1% | Atende plenamente à norma comprovado por código, árvore a11y ou teste de usuário. |
-| 🔴 **Não Conforme (Reprovado)** | **37** | 29,1% | Apresenta falha ou barreira técnica/empírica comprovada. |
-| 🟡 **Parcialmente Conforme** | **14** | 11,0% | Funciona em parte ou apresenta ressalvas de usabilidade/redação. |
-| ⚪ **Não se Aplica ao Site** | **16** | 12,6% | Critérios de mídias/funcionalidades inexistentes no Fala.BR (ex.: vídeos, áudios, transações financeiras). |
-| 🔵 **Faltam Validação Humana** | **18** | **14,2%** | **Itens que dependem estritamente de intervenção manual humana especializada.** |
+| 🟢 **Conforme (Aprovado)** | **47** | 37,0% | Atende plenamente à norma comprovado por código, árvore a11y, injeções de teste ou usuário. |
+| 🔴 **Não Conforme (Reprovado)** | **40** | 31,5% | Apresenta falha ou barreira técnica/empírica comprovada (incluindo falta de `<abbr>`, 160ch/linha e ausência de modal de inatividade). |
+| 🟡 **Parcialmente Conforme** | **15** | 11,8% | Funciona em parte ou apresenta ressalvas de usabilidade/redação. |
+| ⚪ **Não se Aplica ao Site** | **17** | 13,4% | Critérios de mídias/funcionalidades inexistentes no Fala.BR (ex.: vídeos, áudios, fundos em degradê, transações bancárias). |
+| 🔵 **Faltam Validação Humana Estrita** | **8** | **6,3%** | **Itens que dependem estritamente de intervenção manual humana especializada.** |
 | **TOTAL GERAL** | **127** | **100%** | **Checklist Completo Consolidado** |
 
-> **RESPOSTA À PERGUNTA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
-> Dos 40 itens que inicialmente dependiam de avaliação humana, **22 itens foram solucionados** (pelos testes com P1 e P2 e pela extração da Árvore de Acessibilidade do leitor de tela). **Restam exatamente 18 itens que ainda demandam validação humana especializada** (ver Seção 5 para a lista detalhada).
+> **RESPOSTA ATUALIZADA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
+> Após a rodada avançada de requisições, injeções dinâmicas de CSS, varreduras regex e emulação de daltonismo via CDP, **mais 10 itens foram diagnosticados e resolvidos programaticamente**.  
+> **Restam exatamente 8 itens que ainda demandam validação humana especializada** (ver Seção 5 para a lista detalhada).
 
 ---
 
