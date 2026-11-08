@@ -23,6 +23,12 @@ Repositório dedicado ao estudo, sistematização e avaliação prática de aces
      - Análise etapa por etapa do fluxo de manifestação;
      - Plano de correções prioritárias recomendadas.
 
+3. 👥 **[Checklist de Itens que Demandam Revisão Humana Obrigatória](file:///c:/Users/pluca/IHC_2026.2_Grupo03/ITENS_REVISAO_HUMANA.md)**
+   - Documento detalhado e focado exclusivamente em **todos os critérios que robôs não conseguem avaliar** com segurança:
+     - Justificativa técnica e normativa (ABNT NBR 17225 / WCAG 2.2 / Guia UK-BR);
+     - Por que as ferramentas automatizadas falham nesses cenários;
+     - Como a equipe de avaliadores humanos e pessoas com deficiência (PcD) deve proceder em cada teste.
+
 ---
 
 ## 🛠️ Tecnologias e Ferramentas Empregadas na Avaliação
