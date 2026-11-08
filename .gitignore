@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+*.json
+*.html
+audit_script.js
+detailed_checks.js
+explore_steps.js
+run_full_audit.js
+parse_results.py
