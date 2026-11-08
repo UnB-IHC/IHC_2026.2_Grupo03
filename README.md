@@ -29,6 +29,12 @@ Repositório dedicado ao estudo, sistematização e avaliação prática de aces
      - Por que as ferramentas automatizadas falham nesses cenários;
      - Como a equipe de avaliadores humanos e pessoas com deficiência (PcD) deve proceder em cada teste.
 
+4. 🔊 **[Simulação e Auditoria Técnica: Como os Leitores de Tela Leem o Fala.BR](file:///c:/Users/pluca/IHC_2026.2_Grupo03/ANALISE_LEITORES_DE_TELA.md)**
+   - Extração profunda da **Árvore de Acessibilidade (*Accessibility Tree*)** do Chromium (exatamente a mesma camada computada entregue ao NVDA, JAWS e TalkBack):
+     - Transcrição do que o sintetizador de voz efetivamente anuncia em cada botão e campo;
+     - Diagnóstico do "eco de botões fantasmas" (`aria-label="Botão"`);
+     - Verificação da leitura da caixa de relato, stepper de 6 etapas e alertas de erro.
+
 ---
 
 ## 🛠️ Tecnologias e Ferramentas Empregadas na Avaliação
