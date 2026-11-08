@@ -34,21 +34,22 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 
 ## 2. Painel Executivo e Status Geral do Checklist
 
-| Status do Critério | Quantidade de Itens | Percentual | Descrição |
-| :--- | :---: | :---: | :--- |
-| 🟢 **Conforme (Aprovado)** | **49** | 38,6% | Atende plenamente à norma comprovado por código, árvore a11y, testes de usuários e validação prática de erros e linguagem. |
-| 🔴 **Não Conforme (Reprovado)** | **42** | 33,1% | Apresenta falha técnica/empírica comprovada (incluindo perda total de dados com F5/recarregamento e falta de `<abbr>`). |
-| 🟡 **Parcialmente Conforme** | **14** | 11,0% | Funciona em parte ou apresenta ressalvas de usabilidade. |
-| ⚪ **Não se Aplica ao Site** | **17** | 13,4% | Critérios de mídias/funcionalidades inexistentes no Fala.BR (ex.: vídeos, áudios, fundos em degradê, transações bancárias). |
-| 🔵 **Faltam Validação Humana / Ética** | **5** | **3,9%** | **Itens que dependem de teste manual com conta real Gov.br ou têm restrição ética de produção (Passo 6).** |
-| **TOTAL GERAL** | **127** | **100%** | **Checklist Completo Consolidado** |
+### Distribuição Consolidada por Classes Temáticas
 
-> **RESPOSTA ATUALIZADA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
-> Com a incorporação dos seus testes manuais (upload de `.pptx` com erro amigável, teste de F5 com perda de dados, validação de Linguagem Acessível e confirmação técnica de que o **VLibras está ativo em todas as 6 etapas do fluxo**), **restam apenas 5 a 6 itens estritos** (ver Seção 5).
+| Classe Temática | Total Itens | 🟢 Conforme | 🔴 Não Conforme | 🟡 Parcial | ⚪ Não se Aplica | 🔵 Pendente |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Classe 1: Desenvolvimento, Semântica e Testes** | 26 | 10 | 11 | 3 | 2 | 0 |
+| **Classe 2: Privacidade, Segurança e Tempo** | 13 | 4 | 3 | 1 | 3 | 2 |
+| **Classe 3: Navegação, Foco e Interação** | 26 | 10 | 12 | 2 | 2 | 0 |
+| **Classe 4: Conteúdo, Linguagem e Mídia** | 23 | 8 | 4 | 2 | 8 | 1 |
+| **Classe 5: Design, Tipografia e Layout** | 18 | 8 | 3 | 5 | 2 | 0 |
+| **Classe 6: Formulários e Prevenção de Falhas** | 12 | 4 | 5 | 3 | 0 | 0 |
+| **Classe 7: Jornada do Usuário e Fluxos** | 9 | 5 | 2 | 0 | 0 | 2 *(ética/staging)* |
+| **TOTAL GERAL CONSOLIDADO** | **127** | **49 (38,6%)** | **40 (31,5%)** | **16 (12,6%)** | **17 (13,4%)** | **5 (3,9%)** |
 
-> **RESPOSTA ATUALIZADA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
-> Após a rodada avançada de requisições, injeções dinâmicas de CSS, varreduras regex e emulação de daltonismo via CDP, **mais 10 itens foram diagnosticados e resolvidos programaticamente**.  
-> **Restam exatamente 8 itens que ainda demandam validação humana especializada** (ver Seção 5 para a lista detalhada).
+> **RESUMO DO DIAGNÓSTICO:**  
+> Com a integração de todos os testes (auditoria automatizada com *axe-core*, simulação da Árvore de Acessibilidade dos leitores de tela, injeção de *Text Spacing*, responsividade a 320px CSS, testes empíricos com os participantes P1 e P2 e os testes manuais de upload `.pptx`, recarregamento F5, linguagem e VLibras), **122 dos 127 itens (96,1%) foram plenamente diagnosticados e resolvidos**.  
+> **Restam exatamente 5 itens (3,9%) que dependem de teste manual com conta real Gov.br ou têm restrição ética de produção (Passo 6)** (ver Seção 5).
 
 ---
 
@@ -493,30 +494,17 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 
 ---
 
-## 5. Relação Exata dos 18 Itens que AINDA Faltam Validação Humana
+## 5. Relação Exata dos 5 Itens Restantes que AINDA Faltam Validação Humana / Ética
 
-Estes são os **únicos 18 critérios** do checklist que ainda necessitam de revisão humana especializada:
+Estes são os **únicos 5 critérios** (3,9% do checklist total) que ainda necessitam de validação presencial humana com conta real Gov.br ou têm restrição ética de produção:
 
-| Nº | Item do Checklist | Por que a ferramenta não consegue avaliar? | Como deve ser feito o teste humano? |
-| :---: | :--- | :--- | :--- |
-| **1** | **Item 13 (Seção 1):** Tags semânticas para textos especiais (`<em>`, `<q>`, `<abbr>`) | Robôs não julgam o significado contextual de citações jurídicas ou siglas. | Leitura editorial do texto por avaliador humano conferindo a marcação. |
-| **2** | **Item 27 (Seção 2):** Fluxo sem limite de tempo na sessão | Controlado por tokens de backend em tempo real. | Monitorar inatividade no formulário por 30 a 60 minutos contínuos. |
-| **3** | **Item 28 (Seção 2):** Prorrogação com aviso prévio de 20 segundos | Exige aguardar o temporizador do servidor disparar. | Aguardar o timeout e verificar se surge alerta sonoro e visual prorrogável. |
-| **4** | **Item 30 (Seção 2):** Retomada de onde parou após reautenticação | Requer autenticação com Gov.br real e queda forçada de sessão. | Desconectar a sessão no Passo 3 e reconectar para checar se retém dados. |
-| **5** | **Item 40 (Seção 2):** Alertas de segurança claros e sem vazar dados | Julgamento humano sobre clareza de redação técnica e LGPD. | Simular falha de rede/autenticação e checar se expõe códigos de sistema. |
-| **6** | **Item 53 (Seção 3):** Consistência semiótica de todos os ícones | Requer análise de design visual comparativo entre dezenas de páginas. | Mapear todos os ícones das páginas secundárias e auditar padronização. |
-| **7** | **Item 60 (Seção 3):** Sublinhado em hiperlinks no meio de texto | Robôs confundem links com botões e falham em estados dinâmicos. | Inspeção visual direta nos parágrafos de termos de uso e orientações. |
-| **8** | **Item 69 (Seção 4):** Versão simplificada para conceitos avançados | Decisão pedagógica sobre necessidade de materiais de apoio ao cidadão. | Avaliar se termos de LAI/Ouvidoria exigem glossários em linguagem cidadã. |
-| **9** | **Item 71 (Seção 4):** Suporte multimodal para neurodiversos | Ferramenta não avalia se um texto denso deveria ter suporte visual/áudio. | Avaliação de design de serviço público nas orientações de denúncia. |
-| **10** | **Item 77 (Seção 4):** Banners sem texto embutido em pixels | OCR automático não garante conformidade de imagens vetorizadas/raster. | Inspeção visual de banners para confirmar que frases são HTML real. |
-| **11** | **Item 89 (Seção 4):** CamelCase em hashtags e moderação de emojis | Análise do conteúdo editorial de eventuais avisos e campanhas. | Checar se hashtags compostas utilizam CamelCase para boa dicção vocal. |
-| **12** | **Item 94 (Seção 5):** Teste de cores em simuladores de daltonismo | Robôs calculam contraste mas não julgam perda subjetiva de significado. | Simulação com filtros de Protanopia, Deuteranopia e Tritanopia. |
-| **13** | **Item 97 (Seção 5):** Contraste em degradês e fotografias | Analisadores automáticos falham ao calcular gradientes CSS dinâmicos. | Medição pontual com conta-gotas de contraste (*Colour Contrast Analyser*). |
-| **14** | **Item 106 (Seção 5):** Limite de 80 caracteres por linha | Varia conforme tamanho de monitor ultrawide e resolução do usuário. | Testar em telas de alta definição (2K e 4K) conferindo `max-width`. |
-| **15** | **Item 107 (Seção 5):** Integridade com espaçamento forçado (*Text Spacing*) | Ferramenta não prevê sobreposições dinâmicas ao injetar CSS externo. | Executar o bookmarklet de *Text Spacing* da WCAG e checar quebras visuais. |
-| **16** | **Item 118 (Seção 6):** Sugestões formatadas e empáticas de correção de erro | Validadores checam presença de mensagem, mas não julgam a empatia da dica. | Submeter formatos inválidos de dados e avaliar a clareza da orientação. |
-| **17** | **Item 126 (Seção 7):** Tela de confirmação e protocolo do Passo 6 | Submeter em produção cria manifestação permanente na base oficial da CGU. | Testar em ambiente de homologação/treinamento (*staging*) da CGU. |
-| **18** | **Item 127 (Seção 7):** Telas sem conteúdo acolhedoras (*Empty States*) | Ferramenta não entende o conceito de acolhimento afetivo de tela virgem. | Acessar painel com conta nova sem manifestações e avaliar mensagem. |
+| Nº | Item do Checklist | Classe | Por que a ferramenta não consegue avaliar? | Como deve ser feito o teste humano? |
+| :---: | :--- | :---: | :--- | :--- |
+| **1** | **Item 27:** Fluxo sem limite de tempo na sessão de backend | Classe 2 | A expiração é gerida pelo servidor; robôs não medem a inatividade silenciosa. | Monitorar a inatividade no formulário por 30 a 60 minutos contínuos sem mexer na tela. |
+| **2** | **Item 30:** Retomada de onde parou após reautenticação | Classe 2 | Requer login real de cidadão com conta Gov.br (CPF/senha pessoal) e queda forçada de sessão. | Desconectar a sessão no Passo 3 e reconectar com o login Gov.br para checar se retém os dados. |
+| **3** | **Item 71:** Suporte multimodal para neurodiversos | Classe 4 | A ferramenta não julga se o texto de denúncia exige infográfico instrucional ou vídeo em Libras. | Avaliação pedagógica de design instrucional e suporte visual às orientações da Ouvidoria. |
+| **4** | **Item 126:** Tela de confirmação e protocolo do Passo 6 | Classe 7 | **Restrição Ética e Legal em Produção:** Submeter cria denúncia/ouvidoria fictícia permanente no banco da CGU. | Acessar o ambiente de homologação/treinamento (*staging*) da CGU para gerar protocolo simulado com autorização. |
+| **5** | **Item 127:** Telas sem conteúdo acolhedoras (*Empty States*) no painel | Classe 7 | A ferramenta não avalia o acolhimento afetivo da área logada para um usuário virgem. | Acessar o painel do cidadão com uma conta recém-criada sem histórico e avaliar a mensagem de boas-vindas. |
 
 ---
 
