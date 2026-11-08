@@ -36,12 +36,15 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 
 | Status do Critério | Quantidade de Itens | Percentual | Descrição |
 | :--- | :---: | :---: | :--- |
-| 🟢 **Conforme (Aprovado)** | **47** | 37,0% | Atende plenamente à norma comprovado por código, árvore a11y, injeções de teste ou usuário. |
-| 🔴 **Não Conforme (Reprovado)** | **42** | 33,1% | Apresenta falha técnica/empírica comprovada (incluindo ícones inconsistentes com rótulo duplicado "Abrir" e falta de empty states). |
-| 🟡 **Parcialmente Conforme** | **15** | 11,8% | Funciona em parte ou apresenta ressalvas de usabilidade/redação. |
+| 🟢 **Conforme (Aprovado)** | **49** | 38,6% | Atende plenamente à norma comprovado por código, árvore a11y, testes de usuários e validação prática de erros e linguagem. |
+| 🔴 **Não Conforme (Reprovado)** | **42** | 33,1% | Apresenta falha técnica/empírica comprovada (incluindo perda total de dados com F5/recarregamento e falta de `<abbr>`). |
+| 🟡 **Parcialmente Conforme** | **14** | 11,0% | Funciona em parte ou apresenta ressalvas de usabilidade. |
 | ⚪ **Não se Aplica ao Site** | **17** | 13,4% | Critérios de mídias/funcionalidades inexistentes no Fala.BR (ex.: vídeos, áudios, fundos em degradê, transações bancárias). |
-| 🔵 **Faltam Validação Humana / Ética** | **6** | **4,7%** | **Itens que dependem de teste manual com conta real ou têm restrição ética de produção.** |
+| 🔵 **Faltam Validação Humana / Ética** | **5** | **3,9%** | **Itens que dependem de teste manual com conta real Gov.br ou têm restrição ética de produção (Passo 6).** |
 | **TOTAL GERAL** | **127** | **100%** | **Checklist Completo Consolidado** |
+
+> **RESPOSTA ATUALIZADA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
+> Com a incorporação dos seus testes manuais (upload de `.pptx` com erro amigável, teste de F5 com perda de dados, validação de Linguagem Acessível e confirmação técnica de que o **VLibras está ativo em todas as 6 etapas do fluxo**), **restam apenas 5 a 6 itens estritos** (ver Seção 5).
 
 > **RESPOSTA ATUALIZADA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
 > Após a rodada avançada de requisições, injeções dinâmicas de CSS, varreduras regex e emulação de daltonismo via CDP, **mais 10 itens foram diagnosticados e resolvidos programaticamente**.  
