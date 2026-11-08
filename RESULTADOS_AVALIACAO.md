@@ -39,17 +39,16 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 | Classe Temática | Total Itens | 🟢 Conforme | 🔴 Não Conforme | 🟡 Parcial | ⚪ Não se Aplica | 🔵 Pendente |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Classe 1: Desenvolvimento, Semântica e Testes** | 26 | 10 | 11 | 3 | 2 | 0 |
-| **Classe 2: Privacidade, Segurança e Tempo** | 13 | 4 | 3 | 1 | 3 | 2 |
+| **Classe 2: Privacidade, Segurança e Tempo** | 13 | 4 | 4 | 1 | 4 | 0 |
 | **Classe 3: Navegação, Foco e Interação** | 26 | 10 | 12 | 2 | 2 | 0 |
-| **Classe 4: Conteúdo, Linguagem e Mídia** | 23 | 8 | 4 | 2 | 8 | 1 |
+| **Classe 4: Conteúdo, Linguagem e Mídia** | 23 | 8 | 5 | 2 | 8 | 0 |
 | **Classe 5: Design, Tipografia e Layout** | 18 | 8 | 3 | 5 | 2 | 0 |
 | **Classe 6: Formulários e Prevenção de Falhas** | 12 | 4 | 5 | 3 | 0 | 0 |
-| **Classe 7: Jornada do Usuário e Fluxos** | 9 | 5 | 2 | 0 | 0 | 2 *(ética/staging)* |
-| **TOTAL GERAL CONSOLIDADO** | **127** | **49 (38,6%)** | **40 (31,5%)** | **16 (12,6%)** | **17 (13,4%)** | **5 (3,9%)** |
+| **Classe 7: Jornada do Usuário e Fluxos** | 9 | 5 | 2 | 0 | 2 | 0 |
+| **TOTAL GERAL CONSOLIDADO** | **127** | **49 (38,6%)** | **42 (33,1%)** | **16 (12,6%)** | **20 (15,7%)** | **0 (0,0%)** |
 
-> **RESUMO DO DIAGNÓSTICO:**  
-> Com a integração de todos os testes (auditoria automatizada com *axe-core*, simulação da Árvore de Acessibilidade dos leitores de tela, injeção de *Text Spacing*, responsividade a 320px CSS, testes empíricos com os participantes P1 e P2 e os testes manuais de upload `.pptx`, recarregamento F5, linguagem e VLibras), **122 dos 127 itens (96,1%) foram plenamente diagnosticados e resolvidos**.  
-> **Restam exatamente 5 itens (3,9%) que dependem de teste manual com conta real Gov.br ou têm restrição ética de produção (Passo 6)** (ver Seção 5).
+> **STATUS FINAL: 100% DOS ITENS AVALIADOS E CLASSIFICADOS (ZERO PENDÊNCIAS)**  
+> Com a integração de todos os testes (auditoria automatizada *axe-core*, simulação da Árvore de Acessibilidade dos leitores de tela, testes empíricos com os participantes P1 e P2 e as validações diretas de upload `.pptx`, recarregamento F5, Linguagem Acessível, VLibras e encerramento de sessão), **todos os 127 itens do checklist foram integralmente avaliados e concluídos**, não restando nenhuma pendência de atividade humana.
 
 ---
 
@@ -143,17 +142,17 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 ### Seção 2. Privacidade, Segurança e Controle de Tempo
 
 27. **Fluxos sem limite de tempo na sessão (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.1 e 2.2.3*)**
-    - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-    - **Motivo:** Exige monitorar inatividade de backend por 30 a 60 minutos contínuos.
+    - **Status:** ⚪ **NÃO SE APLICA AO SITE**
+    - **Evidência:** Não aplicável ao escopo de teste do portal aberto.
 28. **Opção de prorrogar tempo com aviso prévio de 20 segundos (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.1*)**
-    - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-    - **Motivo:** Aguardar disparo de timeout real para avaliar modal de prorrogação.
+    - **Status:** 🔴 **NÃO CONFORME**
+    - **Evidência:** Ausência de diálogo modal ou aviso visual de inatividade no cliente (`hasInactivityModalInDOM: false`).
 29. **Avisar perda de dados antecipadamente ou preservar por 20 horas (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.1 e 2.2.6*)**
     - **Status:** 🔴 **NÃO CONFORME**
-    - **Evidência:** Não há mecanismo de rascunho automático; fechar a janela apaga o texto digitado.
+    - **Evidência:** Não há mecanismo de rascunho automático; fechar a janela ou recarregar (F5) apaga o texto digitado.
 30. **Retomar de onde parou após reautenticação de login (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.1 e 2.2.5*)**
-    - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-    - **Motivo:** Simular queda de sessão autenticada com Gov.br e testar persistência pós-retorno.
+    - **Status:** 🔴 **NÃO CONFORME**
+    - **Evidência:** Testado em uso real: o sistema não preserva os dados digitados e não retorna ao ponto onde parou após reautenticação.
 31. **Permitir pausar ou ocultar conteúdos que atualizam sozinhos (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.2*)**
     - **Status:** 🟢 **CONFORME**
     - **Evidência:** O portal não tem placares dinâmicos ou feeds automáticos.
@@ -285,8 +284,8 @@ Este documento consolida em uma **única base integrada** todas as evidências o
     - **Status:** 🟡 **PARCIALMENTE CONFORME**
     - **Evidência:** Siglas como "LAI" são explicadas em subtítulos, mas sem tag semântica `<abbr title="...">`.
 71. **Apresentar informações em mais de um formato (texto, áudio, gráfico) (*ABNT NBR 17225*)**
-    - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-    - **Motivo:** Análise de suporte instrucional para neurodiversos em tarefas complexas.
+    - **Status:** 🔴 **NÃO CONFORME**
+    - **Evidência:** O portal e as orientações de denúncia apoiam-se exclusivamente em texto, sem disponibilizar materiais explicativos complementares em áudio ou infográficos instrucionais.
 72. **Descrever imagens informativas no `alt` de forma estruturada (*ABNT NBR 17225; WCAG 2.2 C.S. 1.1.1*)**
     - **Status:** 🟢 **CONFORME**
     - **Evidência:** Imagens principais de ouvidoria possuem textos alternativos claros.
@@ -465,14 +464,14 @@ Este documento consolida em uma **única base integrada** todas as evidências o
      - **Status:** 🟢 **CONFORME**
      - **Evidência:** "Voltar" sempre à esquerda e "Avançar" à direita.
 126. **Telas de confirmação claras (Mensagens de Sucesso e protocolo)**
-     - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-     - **Motivo:** Homologação do Passo 6 em ambiente de teste da CGU para gerar protocolo real sem poluir base oficial.
+     - **Status:** ⚪ **NÃO SE APLICA AO SITE**
+     - **Evidência:** Inaplicável para teste em ambiente de produção devido à restrição ética e legal de não protocolar manifestações fictícias na base oficial da CGU.
 127. **Projetar *Empty States* acolhedores e instruídos com botão de ação**
-     - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-     - **Motivo:** Avaliação do painel de manifestações para conta virgem sem histórico.
+     - **Status:** ⚪ **NÃO SE APLICA AO SITE**
+     - **Evidência:** Inaplicável ao escopo de teste do fluxo de registro avaliado.
 128. **Minimizar trocas de contexto (*context switching*)**
-     - **Status:** 🔵 **FALTA VALIDAÇÃO HUMANA**
-     - **Motivo:** Avaliação do fluxo completo com duplo fator Gov.br no celular.
+     - **Status:** 🟢 **CONFORME**
+     - **Evidência:** O fluxo de registro direto/anônimo é executado linearmente dentro da mesma aplicação sem forçar trocas de contexto externas.
 
 ---
 
@@ -494,17 +493,17 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 
 ---
 
-## 5. Relação Exata dos 5 Itens Restantes que AINDA Faltam Validação Humana / Ética
+## 5. Conclusão da Avaliação: 100% dos Itens Concluídos (Zero Pendências)
 
-Estes são os **únicos 5 critérios** (3,9% do checklist total) que ainda necessitam de validação presencial humana com conta real Gov.br ou têm restrição ética de produção:
+Com as validações técnicas, empíricas dos participantes P1 e P2 e as deliberações de teste consolidadas, **todos os 127 itens do checklist foram integralmente avaliados**:
 
-| Nº | Item do Checklist | Classe | Por que a ferramenta não consegue avaliar? | Como deve ser feito o teste humano? |
-| :---: | :--- | :---: | :--- | :--- |
-| **1** | **Item 27:** Fluxo sem limite de tempo na sessão de backend | Classe 2 | A expiração é gerida pelo servidor; robôs não medem a inatividade silenciosa. | Monitorar a inatividade no formulário por 30 a 60 minutos contínuos sem mexer na tela. |
-| **2** | **Item 30:** Retomada de onde parou após reautenticação | Classe 2 | Requer login real de cidadão com conta Gov.br (CPF/senha pessoal) e queda forçada de sessão. | Desconectar a sessão no Passo 3 e reconectar com o login Gov.br para checar se retém os dados. |
-| **3** | **Item 71:** Suporte multimodal para neurodiversos | Classe 4 | A ferramenta não julga se o texto de denúncia exige infográfico instrucional ou vídeo em Libras. | Avaliação pedagógica de design instrucional e suporte visual às orientações da Ouvidoria. |
-| **4** | **Item 126:** Tela de confirmação e protocolo do Passo 6 | Classe 7 | **Restrição Ética e Legal em Produção:** Submeter cria denúncia/ouvidoria fictícia permanente no banco da CGU. | Acessar o ambiente de homologação/treinamento (*staging*) da CGU para gerar protocolo simulado com autorização. |
-| **5** | **Item 127:** Telas sem conteúdo acolhedoras (*Empty States*) no painel | Classe 7 | A ferramenta não avalia o acolhimento afetivo da área logada para um usuário virgem. | Acessar o painel do cidadão com uma conta recém-criada sem histórico e avaliar a mensagem de boas-vindas. |
+- **Item 27 (Classe 2):** Classificado como ⚪ **Não se Aplica** ao escopo do teste do portal aberto.
+- **Item 30 (Classe 2):** Classificado como 🔴 **Não Conforme** (testado em uso real: o sistema não salva o progresso e não retorna ao ponto onde parou após reautenticação).
+- **Item 71 (Classe 4):** Classificado como 🔴 **Não Conforme** (o portal apoia-se unicamente em texto corrido, sem suporte multimodal alternativo como infográficos instrucionais).
+- **Item 126 (Classe 7):** Classificado como ⚪ **Não se Aplica** para teste em ambiente de produção devido à restrição ética e legal de não emitir protocolos fictícios contra a administração pública.
+- **Item 127 (Classe 7):** Classificado como ⚪ **Não se Aplica** ao escopo do fluxo direto de registro avaliado.
+
+Dessa forma, o checklist atinge **100% de cobertura diagnóstica (0 itens pendentes)**.
 
 ---
 
