@@ -6,12 +6,17 @@ Repositório dedicado ao estudo, sistematização e avaliação prática de aces
 
 ## 📚 Documentos Disponíveis no Repositório
 
-1. 📋 **[Guia e Checklist de Acessibilidade Digital](file:///c:/Users/pluca/IHC_2026.2_Grupo03/GUIA_ACESSIBILIDADE.md)**
-   - O guia completo e estruturado de diretrizes de acessibilidade para web, baseado em:
-     - **ABNT NBR 17225:2025**
-     - **W3C WCAG 2.2** (Níveis A, AA e AAA)
-     - **Guia de Boas Práticas de Acessibilidade Digital (Reino Unido – Brasil)**
-   - Reúne as 7 seções práticas com cada um dos seus itens de checklist e as justificativas técnicas e humanas detalhadas na seção *"Entendendo os 'Porquês'"*.
+1. 🏆 **[Relatório Geral Unificado de Aplicação do Checklist](file:///c:/Users/pluca/IHC_2026.2_Grupo03/RELATORIO_GERAL_APLICACAO_CHECKLIST.md)** *(DOCUMENTO MASTER CONSOLIDADO)*
+   - **O documento definitivo que reúne tudo em um único lugar:**
+     - Aplicação integral item a item dos **127 critérios do checklist**;
+     - Auditoria técnica automatizada com motor **axe-core 4.x**;
+     - Auditoria da **Árvore de Acessibilidade (*Accessibility Tree*)** do leitor de tela (simulação de saída vocal exata);
+     - Avaliação empírica com usuários reais (**P1:** 48 anos com baixa visão; **P2:** 21 anos com tremor essencial) e pontuação SUS;
+     - Diagnóstico completo dos **6 passos do registro de manifestações**;
+     - Relação exata dos **18 itens que ainda demandam validação humana especializada**.
+
+2. 📋 **[Guia e Checklist de Acessibilidade Digital](file:///c:/Users/pluca/IHC_2026.2_Grupo03/GUIA_ACESSIBILIDADE.md)**
+   - O guia teórico completo baseado na **ABNT NBR 17225:2025**, **WCAG 2.2** e **Guia UK-Brasil**, contendo as 7 seções e o detalhamento pedagógico dos *"Porquês"*.
 
 2. 🔍 **[Relatório de Avaliação Técnica de Acessibilidade — Portal Fala.BR](file:///c:/Users/pluca/IHC_2026.2_Grupo03/AVALIACAO_ACESSIBILIDADE_FALABR.md)**
    - Avaliação técnica e detalhada aplicada ao portal da Controladoria-Geral da União (**Fala.BR**):
