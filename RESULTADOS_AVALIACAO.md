@@ -27,7 +27,7 @@ Este documento consolida em uma **única base integrada** todas as evidências o
    - Extração da camada de acessibilidade do Chromium (Chrome DevTools Protocol), simulando com precisão a estrutura entregue aos leitores de tela (**NVDA**, **TalkBack** e **JAWS**) para mapear os nomes acessíveis computados, papéis (*roles*) e alertas.
 3. **Avaliação Empírica com Usuários Reais (Testes de Usabilidade):**
    - **Participante 1 (P1):** Mulher, 48 anos, com problemas de vista / baixa visão (presbiopia severa) e necessidade de ampliação e zoom.
-   - **Participante 2 (P2 - Luiz Guilherme):** Homem, 21 anos, com limitação motora (**Tremor Essencial**).
+   - **Participante 2 (P2):** Homem, 21 anos, com limitação motora (**Tremor Essencial**).
    - Aplicação de protocolo de pensamento em voz alta (*think-aloud*), tarefas de denúncia anônima e questionário padronizado **SUS (System Usability Scale)**.
 
 ---

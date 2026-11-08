@@ -19,8 +19,8 @@ Repositório dedicado ao estudo, sistematização e avaliação prática de aces
 
 ### 3. 👥 Pasta de Testes de Usuário e Entrevistas (`entrevistas/`)
 - 📄 **[Roteiro da Sessão de Teste de Usabilidade](file:///c:/Users/pluca/IHC_2026.2_Grupo03/entrevistas/roteiro_entrevista.md)** (`roteiro_entrevista.md`): Protocolo completo de acolhida, entrevista inicial, tarefas guiadas (*think-aloud*), questionário SUS e encerramento.
-- 🗣️ **[Transcrição Participante 1 — Gabriela](file:///c:/Users/pluca/IHC_2026.2_Grupo03/entrevistas/transcricao_participante_1_gabriela.md)** (`transcricao_participante_1_gabriela.md`): Mulher, 48 anos, baixa visão / presbiopia severa (demanda ampliação e zoom).
-- 🗣️ **[Transcrição Participante 2 — Luiz Guilherme](file:///c:/Users/pluca/IHC_2026.2_Grupo03/entrevistas/transcricao_participante_2_luiz.md)** (`transcricao_participante_2_luiz.md`): Homem, 21 anos, com limitação motora (Tremor Essencial).
+- 🗣️ **[Transcrição Participante 1](file:///c:/Users/pluca/IHC_2026.2_Grupo03/entrevistas/transcricao_participante_1.md)** (`transcricao_participante_1.md`): Mulher, 48 anos, baixa visão / presbiopia severa (demanda ampliação e zoom).
+- 🗣️ **[Transcrição Participante 2](file:///c:/Users/pluca/IHC_2026.2_Grupo03/entrevistas/transcricao_participante_2.md)** (`transcricao_participante_2.md`): Homem, 21 anos, com limitação motora (Tremor Essencial).
 - 📑 **Termos de Consentimento Assinados (PDF):**
-  - `Termo_Consentimento_Gabriela_assinado.pdf`
-  - `Termo_Consentimento_Luiz_assinado.pdf`
+  - `Termo_Consentimento_Participante_1_assinado.pdf`
+  - `Termo_Consentimento_Participante_2_assinado.pdf`
