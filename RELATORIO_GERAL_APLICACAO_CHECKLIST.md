@@ -37,10 +37,10 @@ Este documento consolida em uma **única base integrada** todas as evidências o
 | Status do Critério | Quantidade de Itens | Percentual | Descrição |
 | :--- | :---: | :---: | :--- |
 | 🟢 **Conforme (Aprovado)** | **47** | 37,0% | Atende plenamente à norma comprovado por código, árvore a11y, injeções de teste ou usuário. |
-| 🔴 **Não Conforme (Reprovado)** | **40** | 31,5% | Apresenta falha ou barreira técnica/empírica comprovada (incluindo falta de `<abbr>`, 160ch/linha e ausência de modal de inatividade). |
+| 🔴 **Não Conforme (Reprovado)** | **42** | 33,1% | Apresenta falha técnica/empírica comprovada (incluindo ícones inconsistentes com rótulo duplicado "Abrir" e falta de empty states). |
 | 🟡 **Parcialmente Conforme** | **15** | 11,8% | Funciona em parte ou apresenta ressalvas de usabilidade/redação. |
 | ⚪ **Não se Aplica ao Site** | **17** | 13,4% | Critérios de mídias/funcionalidades inexistentes no Fala.BR (ex.: vídeos, áudios, fundos em degradê, transações bancárias). |
-| 🔵 **Faltam Validação Humana Estrita** | **8** | **6,3%** | **Itens que dependem estritamente de intervenção manual humana especializada.** |
+| 🔵 **Faltam Validação Humana / Ética** | **6** | **4,7%** | **Itens que dependem de teste manual com conta real ou têm restrição ética de produção.** |
 | **TOTAL GERAL** | **127** | **100%** | **Checklist Completo Consolidado** |
 
 > **RESPOSTA ATUALIZADA: QUANTOS FALTAM VALIDAÇÃO HUMANA AGORA?**  
