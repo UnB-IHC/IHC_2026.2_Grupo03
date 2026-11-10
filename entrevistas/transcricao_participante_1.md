@@ -2,6 +2,7 @@
 
 **Data da Sessão:** 6 de novembro de 2026 às 19:22 GMT-03:00  
 **Duração:** 20 minutos e 45 segundos  
+**Link da Gravação em Vídeo:** [Gravação em Vídeo — Participante 1 (Google Drive)](https://drive.google.com/file/d/1n98wHccjvb11rqECNBev6Y7TchUeYsHc/view?usp=sharing)  
 **Entrevistador:** Entrevistador  
 **Perfil do Participante:** Participante 1 (Mulher, 48 anos, baixa visão / presbiopia severa, necessita de ampliação tipográfica e zoom na tela)  
 **Documento de Consentimento:** [`Termo_Consentimento_Participante_1_assinado.pdf`](./Termo_Consentimento_Participante_1_assinado.pdf)
