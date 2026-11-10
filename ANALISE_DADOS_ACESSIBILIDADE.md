@@ -1,4 +1,4 @@
-# 📊 Análise de Dados de Acessibilidade e Usabilidade — Portal Fala.BR
+# Análise de Dados de Acessibilidade e Usabilidade — Portal Fala.BR
 
 **Projeto:** Avaliação de Acessibilidade Digital e Usabilidade — Portal Fala.BR (CGU)  
 **Disciplina:** Interação Humano-Computador (IHC) — Universidade de Brasília (UnB)  
@@ -7,7 +7,7 @@ Esta análise consolida os dados obtidos na avaliação técnica do portal Fala.
 
 ---
 
-## 📌 1. Visão Geral e Indicadores Principais
+## 1. Visão Geral e Indicadores Principais
 
 A combinação entre a inspeção técnica de código, a árvore de acessibilidade (simulação de leitores de tela) e os testes práticos com usuários revelou que o Fala.BR possui um comportamento assimétrico: visualmente é padronizado e espaçoso, mas esconde dificuldades severas na camada de teclado, na semântica do código, no tamanho de fonte para baixa visão e na ausência de informações essenciais na tela inicial.
 
@@ -33,7 +33,7 @@ pie title Distribuição Geral do Checklist (127 Itens)
 
 ---
 
-## 🧩 2. Distribuição das Falhas Críticas por Categoria
+## 2. Distribuição das Falhas Críticas por Categoria
 
 Nem todas as áreas do site apresentam os mesmos desafios. Abaixo, vemos como as **42 reprovações diretas (Não Conforme)** estão distribuídas entre as grandes classes avaliadas:
 
@@ -51,7 +51,7 @@ pie title Distribuição das 42 Falhas Críticas por Categoria
 
 ---
 
-## 👥 3. Métricas e Resultados Consolidados por Tarefa (Seção 3 e 4)
+## 3. Métricas e Resultados Consolidados por Tarefa (Seção 3 e 4)
 
 Com base na minutagem cronometrada a partir dos vídeos gravados e no protocolo metodológico oficial de IHC (Rubin & Chisnell, 2008; Tullis & Albert, 2013):
 
@@ -77,7 +77,7 @@ Com base na minutagem cronometrada a partir dos vídeos gravados e no protocolo 
 
 ---
 
-## ⏱️ 4. Comparativo de Tempo por Tarefa (P1 vs. P2 vs. Ensaio de Referência)
+## 4. Comparativo de Tempo por Tarefa (P1 vs. P2 vs. Ensaio de Referência)
 
 O tempo total nas tarefas ativas foi de **395 segundos (6m35s)** para P1 e **189 segundos (3m09s)** para P2. A participante com baixa visão levou mais que o dobro do tempo (+109,0%).
 
@@ -97,7 +97,7 @@ pie title Proporção do Tempo Gasto nas Tarefas Ativas (em segundos)
 
 ---
 
-## 🔗 5. Cruzamento: Resultados do Checklist vs. Comportamento Real dos Usuários
+## 5. Cruzamento: Resultados do Checklist vs. Comportamento Real dos Usuários
 
 Este cruzamento conecta diretamente **o que a inspeção técnica do checklist detectou** com **o que aconteceu de verdade durante a participação dos usuários nos vídeos**:
 
@@ -127,7 +127,7 @@ pie title Validação Empírica dos Problemas do Checklist nos Testes
 
 ---
 
-## 📐 6. Avaliação de Usabilidade: Escala SUS
+## 6. Avaliação de Usabilidade: Escala SUS
 
 Ao término dos testes, ambos responderam ao questionário padronizado SUS (10 afirmações com notas de 1 a 5).
 
@@ -156,7 +156,7 @@ pie title Proporção dos Escores no Questionário SUS
 
 ---
 
-## 💡 7. Principais Insights Extraídos do Cruzamento dos Dados
+## 7. Principais Insights Extraídos do Cruzamento dos Dados
 
 ### 1. O Tab como compensação motora: sucesso prático com custo de esforço
 O participante com tremor essencial utilizou o teclado como tecnologia assistiva primária para evitar a instabilidade do mouse. Esse comportamento validou o acerto técnico do **foco visível âmbar de 4px (Item 44)**, permitindo tempos rápidos (47s na T2 e 65s na T3). Por outro lado, expôs brutalmente a falta do **Skip Link (Item 49)**: sem ele, P2 foi obrigado a teclar `Tab` repetidamente por dezenas de links do cabeçalho antes de começar a preencher o formulário.
@@ -172,3 +172,154 @@ Mesmo demorando **o dobro do tempo (395s vs. 189s)** e necessitando de ajuda do 
 
 ### 5. Resiliência a falhas: a perda real de dados quase concretizada
 A instabilidade enfrentada por P1 aos 03:30 (página travada que exigiu atualização F5) validou a gravidade das não conformidades dos **Itens 28, 29 e 123 (ausência de auto-save e salvamento de rascunho)**. Se o travamento ocorresse no Passo 4, após P1 vencer as dificuldades de leitura e digitação, todo o esforço teria sido perdido.
+
+---
+
+## 8. Personas Inclusivas Aplicadas ao Portal Fala.BR
+
+Para fundamentar o diagnóstico empírico em modelos mentais reais, estruturamos duas personas fundamentadas nos dados dos testes e no Espectro de Habilidades:
+
+### Persona 1: Maria Helena — Baixa Visão e Presbiopia Severa (Permanente / Sensorial)
+* **Demografia:** 48 anos, servidora pública estadual, usuária assídua de computador e smartphone no trabalho.
+* **Tecnologias Assistivas / Hábitos:** Utiliza óculos de alto grau, ativa rotineiramente o zoom do navegador (125% a 150%) e depende de fontes em bom tamanho e alto contraste. Não possui treinamento com leitores de tela narrativos.
+* **Objetivo no Fala.BR:** Registrar uma manifestação pública de forma rápida, autônoma e sem necessidade de pedir ajuda a terceiros.
+* **Barreiras Reais Enfrentadas no Portal:**
+  * **Tipografia diminuta:** A escala tipográfica padrão do portal causou fadiga imediata de leitura (*"as letras precisavam ser maiores"* repetido 4 vezes).
+  * **Placeholder frágil:** No Passo 1 (Relato), a ausência de um `<label>` fixo permanente gerou hesitação, pois a dica interna cinza desapareceu assim que o texto começou a ser inserido.
+  * **Seletor de órgãos não intuitivo:** No Passo 2, clicou repetidas vezes na seta do dropdown esperando uma lista pronta, demorando 100 segundos para compreender que o componente exigia digitação prévia para autocompletar.
+* **Tempo Total de Sessão:** **395 segundos (6m35s)** | **Escore SUS:** **72,5 pontos**.
+
+---
+
+### Persona 2: Lucas Ferreira — Tremor Essencial e Controle Motor Fino (Permanente / Motora)
+* **Demografia:** 21 anos, estudante universitário, alto domínio de tecnologias digitais e navegação web.
+* **Tecnologias Assistivas / Estratégia de Navegação:** Apresenta Tremor Essencial de grau moderado nas mãos, o que dificulta cliques estáveis em alvos pequenos com mouse ou trackpad. **Estratégia assistiva primária: navegação intensiva por teclado via tecla `Tab` e teclas direcionais.**
+* **Objetivo no Fala.BR:** Denunciar uma irregularidade de forma 100% anônima e com a menor sobrecarga de cliques possível.
+* **Barreiras Reais Enfrentadas no Portal:**
+  * **Ausência de Skip Link:** Para chegar ao formulário, foi obrigado a pressionar `Tab` dezenas de vezes através dos menus repetitivos do cabeçalho da CGU.
+  * **Arquitetura de informação falha na Home:** Não encontrou nenhuma menção explícita à denúncia anônima na tela inicial (`/v2/`), navegando inicialmente para rotas incorretas.
+* **Pontos Positivos Identificados:** Aprovou o indicador de foco âmbar de 4px e a área generosa dos botões de ação ($>44\text{px}$).
+* **Tempo Total de Sessão:** **189 segundos (3m09s)** | **Escore SUS:** **65,0 pontos**.
+
+---
+
+## 9. Mapa de Empatia do Cidadão no Portal Fala.BR
+
+O Mapa de Empatia a seguir sintetiza a experiência dos usuários durante a interação com o Fala.BR:
+
+| Quadrante | O que as evidências dos testes revelam |
+| :--- | :--- |
+| **O que VÊ?** | Uma interface com layout visual moderno e limpo à primeira vista, mas com textos de fontes pequenas, placeholders em cinza-claro de baixo contraste, seletores sem instruções visuais prévias e a ausência de um destaque frontal para "Denúncia Anônima". |
+| **O que OUVE / LÊ?** | Leitores de tela anunciando nós decorativos desnecessários, botões rotulados genericamente como `aria-label="Botão"` (sem especificar a função) e textos com jargões burocráticos sobre termos de ouvidoria. |
+| **O que DIZ e FAZ?** | Pressiona a tecla `Tab` dezenas de vezes para evitar o mouse; aproxima o rosto da tela para ler letras miúdas; clica seguidas vezes na seta de menus achando que são listas simples; relata verbalmente: *"as letras precisava ser maior"* e *"aqui eu não vejo nada de forma anônima"*. |
+| **O que PENSA e SENTE?** | Sente hesitação e insegurança no início do fluxo; assume para si a culpa por não conseguir ler ("é porque eu não enxergo direito"); teme que o travamento da página apague todo o relato; sente alívio ao chegar na tela de revisão do Passo 5. |
+| **DORES (*Pains*)** | • Travamento e instabilidade técnica sem rascunho salvo (PR-01).<br>• Sobrecarga de foco no teclado por falta de Skip Link (PR-04).<br>• Desorientação na página inicial sem atalho para denúncia anônima (PR-02).<br>• Fadiga visual provocada por tipografia reduzida (PR-05). |
+| **GANHOS (*Gains*)** | • Conclusão com sucesso da denúncia anônima.<br>• Transparência e segurança garantidas na tela de revisão final (Passo 5).<br>• Foco de alto contraste âmbar bem visível nos campos de texto. |
+
+---
+
+## 10. Service Blueprint do Fluxo de Denúncia Anônima
+
+O Service Blueprint a seguir mapeia a jornada de registro de manifestações anônimas em suas cinco camadas, evidenciando as rupturas entre a interface e os serviços de retaguarda:
+
+```mermaid
+flowchart TD
+    subgraph Evidencias["1. EVIDÊNCIAS DIGITAIS"]
+        E1["Página Inicial /v2/<br>(Cards de Serviços)"]
+        E2["Passo 1: Formulário<br>de Relato (Textarea)"]
+        E3["Passo 2 e 3: Tipo, Assunto<br>e Localização"]
+        E4["Passo 5: Tela de<br>Revisão de Dados"]
+        E5["Passo 6: Confirmação e<br>Protocolo Oficial"]
+    end
+
+    subgraph Acoes["2. AÇÕES DO CIDADÃO"]
+        A1["Busca canal de<br>Denúncia Anônima"]
+        A2["Digita o relato e<br>detalhes do fato"]
+        A3["Pesquisa o órgão e<br>município envolvido"]
+        A4["Confere todas as<br>informações na tela"]
+        A5["Recebe o protocolo e<br>finaliza o processo"]
+    end
+
+    subgraph Frontstage["3. LINHA DE INTERAÇÃO (FRONTSTAGE)"]
+        F1["Menus do cabeçalho sem<br>Skip Link e sem card de anonimato"]
+        F2["Campo sem label fixo;<br>instabilidade de tela exigindo F5"]
+        F3["Dropdown exige digitação<br>sem instruir o usuário"]
+        F4["Card estruturado com botão<br>Voltar e Avançar bem posicionados"]
+        F5["Exibição do código de<br>acompanhamento alfanumérico"]
+    end
+
+    subgraph Backstage["4. LINHA DE VISIBILIDADE (BACKSTAGE)"]
+        B1["Roteamento de URLs e checagem<br>de sessão não autenticada"]
+        B2["<b>FALHA CRÍTICA:</b> Ausência de auto-save<br>em localStorage / sessionStorage"]
+        B3["Consulta assíncrona (AJAX)<br>à API de Órgãos da CGU"]
+        B4["Consolidação dos dados em<br>objeto JSON temporário"]
+        B5["Submissão dos dados ao motor<br>central do sistema e-Ouv"]
+    end
+
+    subgraph Suporte["5. PROCESSOS DE APOIO E INFRAESTRUTURA"]
+        S1["Sistema de Contas Gov.BR / Módulo de Anonimização"]
+        S2["Infraestrutura de Hospedagem em Nuvem do Governo Federal"]
+        S3["Banco de Dados Integrado de Órgãos e Entidades Federais"]
+        S4["Sistema Central da Controladoria-Geral da União (CGU)"]
+    end
+
+    E1 --> A1 --> F1 --> B1 --> S1
+    E2 --> A2 --> F2 --> B2 --> S2
+    E3 --> A3 --> F3 --> B3 --> S3
+    E4 --> A4 --> F4 --> B4 --> S4
+    E5 --> A5 --> F5 --> B5 --> S4
+```
+
+### Diagnóstico de Rupturas no Service Blueprint:
+1. **Ponto de Ruptura 1 (Transição Home $\rightarrow$ Passo 1):** A falta de sincronização e a ausência de rascunho em *localStorage* transforma qualquer instabilidade de rede em um evento catastrófico (PR-01).
+2. **Ponto de Ruptura 2 (Passo 2 — Chamada Assíncrona de Órgãos):** O componente visual não informa o status de consulta assíncrona (*loading*), fazendo com que usuários com lentidão cognitiva ou visual acreditem que o sistema parou de responder.
+
+---
+
+## 11. UX Canvas / Canvas de IHC do Projeto Fala.BR
+
+| Bloco do Canvas | Definição Aplicada à Avaliação do Fala.BR |
+| :--- | :--- |
+| **1. Problema Central** | O portal Fala.BR possui barreiras de semântica, foco de teclado, tipografia reduzida e falta de persistência de dados que dificultam o exercício da cidadania por pessoas com deficiência. |
+| **2. Usuários e Perfis Extremos** | Cidadãos com baixa visão/presbiopia severa (P1), pessoas com limitação motora/tremores (P2), idosos e denunciantes sob estresse emocional. |
+| **3. Proposta de Valor** | Proporcionar um canal de ouvidoria federal plenamente inclusivo, autônomo, seguro e aderente às normas ABNT NBR 17225:2025 e WCAG 2.2 Nível AA. |
+| **4. Soluções de Interface Propostas** | • Implementação de *Skip Link* no primeiro foco do cabeçalho.<br>• Salvamento automático contínuo de rascunhos em cache local seguro.<br>• Rótulos `<label>` fixos fora do campo e dicas visuais em dropdowns.<br>• Controles nativos visíveis de ampliação de fonte (`A+` / `A-`).<br>• Card direto de "Denúncia Anônima" na página inicial. |
+| **5. Canais e Tecnologias** | Plataforma web responsiva em navegadores modernos, operável 100% via teclado e plenamente compatível com NVDA, TalkBack e ampliação de 200%. |
+| **6. Restrições Técnicas e Normativas** | Conformidade obrigatória com a Lei Brasileira de Inclusão (Lei nº 13.146/2015), WCAG 2.2, LGPD (anonimização estrita) e Design System GOV.BR. |
+| **7. Métricas de Sucesso (KPIs)** | • Escore SUS superior a **75 pontos** (Conceito B — Bom).<br>• Taxa de conclusão de tarefas sem ajuda de **100%**.<br>• Zero perda de dados em caso de instabilidade ou recarregamento acidental. |
+| **8. Hipóteses de Melhoria** | Se adicionarmos o *Skip Link* e salvamento de rascunho, o tempo de navegação de usuários de teclado cairá pela metade e o abandono de manifestações será zerado. |
+| **9. Impacto Social e Cidadão** | Democratização real do controle social e garantia de que nenhum brasileiro seja silenciado por barreiras digitais no canal oficial de ouvidoria da República. |
+
+---
+
+## 12. Avaliação Heurística de Nielsen do Portal Fala.BR (10 Heurísticas)
+
+Realizamos a avaliação sistemática das **10 Heurísticas de Usabilidade de Jakob Nielsen (1994)** sobre o fluxo avaliado do Fala.BR:
+
+| Heurística de Nielsen | Diagnóstico no Portal Fala.BR | Severidade (0 a 4) | Relação com Itens do Pocket |
+| :--- | :--- | :---: | :---: |
+| **H1. Visibilidade do status do sistema** | **Parcialmente Cumprida:** O formulário possui indicador visual de etapas ("Passo 2 de 5"), mas falha em anunciar estados dinâmicos para leitores de tela (falta de `aria-live`) e não indica quando a página está travada. | **2 (Menor)** | Itens 39 e 120 |
+| **H2. Correspondência entre o sistema e o mundo real** | **Cumprida:** A sequência de perguntas (Relato $\rightarrow$ Órgão $\rightarrow$ Local $\rightarrow$ Revisão) reflete com precisão o modelo mental do registro de uma ocorrência cidadã. | **0 (Sem problema)** | Itens 119 e 125 |
+| **H3. Controle e liberdade do usuário** | **Violada Gravemente:** Ausência de salvamento de rascunho (*auto-save*). O travamento da página sofrido por P1 exigiu F5 e colocou todos os dados em risco de perda total. | **4 (Catastrófico)** | Itens 28, 29 e 123 (PR-01) |
+| **H4. Consistência e padrões** | **Cumprida:** O portal segue rigidamente a paleta e os componentes visuais padronizados do Design System GOV.BR, transmitindo credibilidade. | **0 (Sem problema)** | Itens 47, 48 e 125 |
+| **H5. Prevenção de erros** | **Violada:** O seletor de órgãos não instrui que exige digitação prévia, induzindo o usuário a cliques repetidos frustrantes. | **3 (Grave)** | Itens 35 e 111 (PR-03) |
+| **H6. Reconhecimento em vez de memorização** | **Violada:** A caixa de texto do relato não tem `<label>` externo e depende exclusivamente de um *placeholder* em cinza que desaparece ao primeiro caractere digitado. | **2 (Menor)** | Itens 109 e 110 (PR-06) |
+| **H7. Flexibilidade e eficiência de uso** | **Violada Gravemente:** Ausência de link de salto (*Skip Link*), forçando P2 a dezenas de toques desnecessários de Tab; botões semânticos críticos com rótulo genérico `aria-label="Botão"`. | **3 (Grave)** | Itens 33, 49 e 100 (PR-04) |
+| **H8. Estética e design minimalista** | **Parcialmente Cumprida:** O layout visual é limpo e sem excessos, mas a tipografia básica é pequena para idosos e pessoas com visão subnormal. | **2 (Menor)** | Itens 104 e 105 (PR-05) |
+| **H9. Auxílio no reconhecimento, diagnóstico e recuperação de erros** | **Violada:** Quando ocorrem falhas de validação, as mensagens não movem automaticamente o foco do teclado para o campo e faltam instruções claras de correção. | **3 (Grave)** | Itens 117 e 118 |
+| **H10. Ajuda e documentação** | **Violada:** A página inicial não explica como funciona a denúncia anônima nem informa pré-requisitos antes de o cidadão entrar no formulário, gerando erros de rota em 100% dos usuários. | **3 (Grave)** | Itens 121 e 127 (PR-02) |
+
+---
+
+## 13. Instrumental e Ferramentas Empregadas na Auditoria
+
+A avaliação do Fala.BR foi realizada mediante a orquestração integrada do seguinte conjunto instrumental:
+
+| Ferramenta / Método | Modo de Aplicação no Fala.BR | Tipo de Evidência Produzida |
+| :--- | :--- | :--- |
+| **axe-core 4.x via Puppeteer** | Varredura de código automatizada em ambiente *Headless Chrome* na Home e nos 6 passos do formulário. | Identificação de violações de contraste, atributos WAI-ARIA inválidos e elementos de botão sem nome acessível. |
+| **Chromium Accessibility Tree (CDP)** | Extração direta da árvore de acessibilidade no Chrome DevTools Protocol. | Confirmação de que botões possuíam a propriedade computada `name="Botão"`, gerando invisibilidade para tecnologias assistivas. |
+| **NVDA 2024.x** | Navegação simulada por leitor de tela no ambiente Windows. | Verificação de live regions ausentes e falta de anúncio em mensagens dinâmicas de erro. |
+| **Navegação Exclusiva por Teclado** | Teste manual cobrindo todas as telas com teclas `Tab`, `Shift+Tab`, `Enter`, `Espaço` e `ESC`. | Identificação da falta de Skip Link e teste do anel de foco âmbar de 4px. |
+| **WebAIM Contrast Checker** | Medição colorimétrica das fontes cinzas e botões secundários. | Constatação de placeholders cinzas que não atingiam a razão mínima de 4,5:1. |
+| **System Usability Scale (SUS)** | Aplicação do formulário de 10 perguntas imediatamente após o término das tarefas com P1 e P2. | Mensuração psicométrica da usabilidade percebida (Média: 68,75 pontos — Conceito C). |

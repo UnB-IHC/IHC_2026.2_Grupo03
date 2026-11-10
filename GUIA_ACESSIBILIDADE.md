@@ -1,20 +1,137 @@
-# Checklist de Acessibilidade Digital
+# Guia e Pocket de Acessibilidade Digital e IHC
 
-Criar um ambiente digital acessível exige entender de verdade as barreiras tecnológicas, cognitivas e sensoriais que milhões de pessoas enfrentam todos os dias. Este checklist não é voltado para um sistema específico, mas funciona como um guia prático para avaliar sistemas. Ele reúne as exigências legais e de usabilidade para qualquer interface web, garantindo que a acessibilidade e experiência seja tratada como pilar estrutural do projeto.
+**Projeto:** Pocket de IHC e Guia Integrado de Acessibilidade Digital  
+**Disciplina:** Interação Humano-Computador (IHC 2026.2) — Universidade de Brasília (UnB)  
+**Grupo 03**
 
----
-
-## Nossas Três Referências Fundamentais
-
-Nosso guia foi montado com base em três documentos principais que se complementam, unindo a obrigação legal à excelência na experiência do usuário (UX):
-
-1. **ABNT NBR 17225:2025**: Nossa base técnica e legal no Brasil. Ela define os requisitos para mitigar barreiras, alinhando-se à Lei Brasileira de Inclusão (LBI), com foco no desempenho real das pessoas (navegar sem ver, sem ouvir, ou com limitações motoras e cognitivas).
-2. **WCAG 2.2**: O padrão-ouro mundial mantido pelo W3C. Ele garante que nossas recomendações sejam agnósticas a dispositivos (*device-agnostic*), validando os quatro princípios de que a web deve ser: Perceptível, Operável, Compreensível e Robusta.
-3. **Guia de Boas Práticas (Reino Unido - Brasil)**: É o documento que traduz as regras técnicas rígidas para o dia a dia ágil de gestão, design e desenvolvimento. Ele traz a abordagem humana, focando na cultura da equipe e na redução da carga cognitiva.
+Criar um ambiente digital verdadeiramente inclusivo exige mais do que inspecionar tags HTML: exige entender em profundidade as barreiras tecnológicas, cognitivas, sensoriais e motoras que milhões de cidadãos enfrentam cotidianamente. Este guia unifica os fundamentos de **Interação Humano-Computador (IHC)**, **User Experience (UX)**, as **10 Heurísticas de Usabilidade de Nielsen**, ferramentas de auditoria e o **Pocket Checklist Normativo de 127 Itens**, tratando a acessibilidade como pilar estrutural e ético do projeto de software.
 
 ---
 
-## 1. Desenvolvimento, Semântica e Testes
+## 1. Nossas Referências Fundamentais
+
+Nosso guia foi construído sobre quatro pilares normativos e metodológicos que se complementam, unindo a obrigação legal brasileira à excelência internacional na experiência do usuário:
+
+1. **ABNT NBR 17225:2025**: Base técnica e legal nacional no Brasil. Define requisitos objetivos para mitigar barreiras, alinhando-se à **Lei Brasileira de Inclusão (LBI - Lei Federal nº 13.146/2015)**, com foco no desempenho real de pessoas que navegam sem ver, sem ouvir, ou com limitações motoras, cognitivas e de aprendizagem.
+2. **W3C WCAG 2.2**: O padrão-ouro mundial mantido pelo W3C/WAI. Assegura que as diretrizes sejam agnósticas a dispositivos (*device-agnostic*), validando os quatro princípios universais da acessibilidade: **Perceptível**, **Operável**, **Compreensível** e **Robusto** (níveis A, AA e AAA).
+3. **Guia de Boas Práticas de Acessibilidade Digital (Reino Unido – Brasil)**: Traduz normas técnicas rígidas para o dia a dia ágil de design e engenharia, com ênfase na abordagem humana, empatia, cultura de equipe e redução de carga cognitiva.
+4. **Fundamentos Clássicos de IHC e Usabilidade (Nielsen, Norman, Rubin & Chisnell)**: Modelos mentais, heurísticas de usabilidade, prevenção de falhas e avaliação empírica com usuários reais.
+
+---
+
+## 2. Fundamentos e Métodos Integrados de IHC e UX
+
+Acessibilidade digital não é um "aditivo cosmético" aplicado no fim do desenvolvimento. Em IHC, projetar para a diversidade humana requer métodos formais de empatia, ideação, mapeamento de jornadas e verificação contínua.
+
+### 2.1 Personas Inclusivas e o Espectro de Habilidades
+Personas em IHC são arquétipos fundamentados em dados reais que sintetizam perfis, motivações, objetivos e comportamentos dos usuários. No design inclusivo, adotamos o conceito de **Espectro de Habilidades** (*Microsoft Inclusive Design*), entendendo que a limitação de uma pessoa pode ser permanente, temporária ou situacional:
+
+```mermaid
+flowchart TD
+    subgraph Espectro["Espectro de Habilidades em IHC"]
+        A["<b>Permanente:</b> Usuário com perda visual profunda ou ausência de um membro"]
+        B["<b>Temporária:</b> Usuário com catarata recente ou braço quebrado engessado"]
+        C["<b>Situacional:</b> Cidadão sob luz solar ofuscante na rua ou carregando uma criança no colo"]
+    end
+    A --- B --- C
+```
+
+* **Como construir Personas Inclusivas:**
+  1. **Evitar estereótipos:** Mapear necessidades assistivas reais (ex.: uso de leitor de tela, navegação exclusiva por teclado, dependência de ampliação de tela de 200%).
+  2. **Condição técnica:** Descrever equipamentos, navegadores, dispositivos e softwares assistivos (NVDA, TalkBack, lentes de aumento).
+  3. **Carga cognitiva e estresse:** Considerar o nível de letramento digital e o estado emocional durante o uso do serviço público.
+
+---
+
+### 2.2 Design Empático e o Mapa de Empatia
+O Design Empático busca transcender suposições pessoais dos desenvolvedores, permitindo experienciar e compreender as frustrações reais de quem navega sob limitações. A ferramenta central para operacionalizar essa abordagem é o **Mapa de Empatia Adaptado para IHC**:
+
+| Quadrante | Pergunta Norteadora no Contexto de Interfaces | Aplicação Prática em Acessibilidade |
+| :--- | :--- | :--- |
+| **O que o usuário VÊ?** | Como a tela se apresenta? Há elementos ilegíveis, fontes minúsculas ou falta de foco visível? | Identificar contrastes insuficientes, botões sem distinção e layouts que quebram com zoom. |
+| **O que o usuário OUVE?** | O que o leitor de tela narra? As ordens de leitura fazem sentido ou geram ruído inútil? | Detectar botões rotulados genericamente como "Botão" ou links sem contexto narrativo. |
+| **O que o usuário DIZ e FAZ?** | Quais ações o usuário tenta executar? O que ele relata espontaneamente (*think-aloud*)? | Registrar hesitações, tentativas repetidas de clique e falas de frustração ou surpresa. |
+| **O que o usuário PENSA e SENTE?** | O usuário sente segurança ou medo de perder dados? Ele se culpa pelos erros da interface? | Identificar o paradoxo da auto-culpabilização e a ansiedade gerada por timeouts repentinos. |
+| **DORES (*Pains*)** | Barreiras, travamentos, perda de esforço, campos confusos, dependência de ajuda externa. | Priorizar correções críticas com base no impacto direto na autonomia do cidadão. |
+| **GANHOS (*Gains*)** | Autonomia completa, rapidez, confirmação clara de sucesso, transparência e previsibilidade. | Validar requisitos funcionais e métricas de satisfação (como o escore SUS). |
+
+---
+
+### 2.3 Jornadas do Usuário e Service Blueprint
+Enquanto a **Jornada do Usuário** mapeia a experiência sob a ótica estrita de quem usa a tela (Passos 1 a 6 de um formulário), o **Service Blueprint** expande essa visão para os bastidores operacionais, conectando o design de interface à arquitetura de serviços públicos.
+
+O Service Blueprint organiza-se em 5 camadas interdependentes:
+1. **Evidências Físicas / Digitais:** Telas, e-mails de confirmação, protocolos, mensagens de alerta e campos visíveis.
+2. **Ações do Usuário:** Etapas concretas realizadas pelo cidadão (buscar canal, digitar dados, revisar, enviar).
+3. **Linha de Interação (*Frontstage*):** Os componentes de interface e os atendentes humanos que interagem diretamente com o usuário.
+4. **Linha de Visibilidade (*Backstage*):** Servidores de aplicação, rotinas de validação de formulário e equipes internas de triagem que o usuário não enxerga diretamente.
+5. **Linha de Comunicação Interna / Processos de Apoio:** Bancos de dados, sistemas legados de ouvidoria (ex.: e-Ouv, SIGRH) e infraestrutura de rede.
+
+> **Regra de Ouro:** Uma falha no *Backstage* (como a ausência de persistência em banco ou perda de sessão) destrói instantaneamente a experiência no *Frontstage*, punindo severamente quem tem baixa velocidade motora ou de leitura.
+
+---
+
+### 2.4 Canvas de IHC / UX Canvas
+O Canvas de IHC sintetiza em uma única matriz visual o problema a ser resolvido, os usuários impactados, as restrições normativas e as métricas de validação:
+
+```
+┌─────────────────────────┬─────────────────────────┬─────────────────────────┐
+│ 1. PROBLEMA CENTRAL     │ 2. PERSONAS E CONTEXTO  │ 3. PROPOSTA DE VALOR    │
+│ Barreiras de navegação, │ Cidadãos com deficiência│ Acesso público universal│
+│ falhas em formulários e │ visual, motora ou       │ autônomo, seguro e      │
+│ falta de acessibilidade │ cognitiva em serviços   │ aderente à legislação   │
+├─────────────────────────┼─────────────────────────┼─────────────────────────┤
+│ 4. RESTRIÇÕES E NORMAS  │ 5. SOLUÇÕES DE DESIGN   │ 6. CANAIS E TECNOLOGIAS │
+│ ABNT NBR 17225, WCAG    │ Skip Links, rótulos     │ Web responsiva, suporte │
+│ 2.2 Nível AA, LBI nº    │ fixos, foco de alto     │ a teclado, leitores NVDA│
+│ 13.146 e LGPD           │ contraste, auto-save    │ e TalkBack, mobile      │
+├─────────────────────────┼─────────────────────────┼─────────────────────────┤
+│ 7. MÉTRICAS DE SUCESSO  │ 8. HIPÓTESES DE VALIDAÇÃO│ 9. IMPACTO ESPERADO    │
+│ SUS ≥ 75, conclusão     │ Se adicionarmos salvamento│ Zero perda de dados e  │
+│ sem ajuda ≥ 90%, zero   │ de rascunho, o índice de│ redução drástica do     │
+│ erros graves de leitor  │ desistência cairá a zero│ tempo de preenchimento  │
+└─────────────────────────┴─────────────────────────┴─────────────────────────┘
+```
+
+---
+
+### 2.5 As 10 Heurísticas de Usabilidade de Nielsen Aplicadas à Acessibilidade
+As clássicas heurísticas de Jakob Nielsen (1994) ganham contornos indispensáveis quando integradas à acessibilidade digital:
+
+1. **Visibilidade do status do sistema:** A interface deve informar claramente o estado atual (ex.: "Passo 2 de 5", carregando, enviado). Em acessibilidade, requer o uso de *ARIA Live Regions* (`aria-live="polite"`) para que leitores de tela anunciem mensagens de status sem roubar o foco do usuário.
+2. **Correspondência entre o sistema e o mundo real:** Uso de linguagem cidadã, direta e sem jargões jurídicos ou técnicos. A ordem dos campos na tela e na Árvore de Acessibilidade deve seguir o modelo mental intuitivo de um protocolo presencial.
+3. **Controle e liberdade do usuário:** Oferecer "saídas de emergência" visíveis e operáveis via teclado (botões de Cancelar e Voltar) sem armadilhas de foco (*keyboard traps*) e sem perda irreversível de dados.
+4. **Consistência e padrões:** Manter a mesma identidade visual, mesmos atalhos e mesmo comportamento de botões em todas as telas da plataforma, respeitando convenções do Design System governamental.
+5. **Prevenção de erros:** Mais eficiente do que uma mensagem de erro bem escrita é desenhar a interface para evitar o erro. Exemplos: campos com máscaras de digitação inteligentes, seletores que instruem claramente como pesquisar e salvamento automático contínuo de rascunhos.
+6. **Reconhecimento em vez de memorização:** Manter instruções, rótulos e dicas visíveis o tempo todo. É terminantemente proibido utilizar unicamente *placeholders* (textos em cinza dentro da caixa de texto que desaparecem ao começar a digitar), pois isso sobrecarrega a memória de trabalho de idosos e neurodivergentes.
+7. **Flexibilidade e eficiência de uso:** Permitir que usuários experientes ou que utilizam tecnologias assistivas naveguem com agilidade (links de salto "*Skip to main content*", teclas de atalho) enquanto apoia novatos com dicas contextuais.
+8. **Estética e design minimalista:** Interfaces limpas, eliminando nós decorativos desnecessários do código HTML que sobrecarregam a narração de leitores de tela com "ruído inútil".
+9. **Auxílio no reconhecimento, diagnóstico e recuperação de erros:** Mensagens de erro em linguagem humana construtiva, indicando explicitamente qual campo falhou e como corrigi-lo, transferindo automaticamente o foco do teclado para o primeiro campo problemático.
+10. **Ajuda e documentação:** Orientações breves e contextuais disponíveis exatamente onde a decisão precisa ser tomada (ex.: explicar na página inicial como funciona uma denúncia anônima antes de o cidadão iniciar o formulário).
+
+---
+
+### 2.6 Catálogo e Pesquisa de Ferramentas de Auditoria e Apoio
+
+| Categoria | Ferramenta | Plataforma / Tipo | Função Central em Avaliações de Acessibilidade e IHC |
+| :--- | :--- | :--- | :--- |
+| **Leitores de Tela** | **NVDA** (*NonVisual Desktop Access*) | Windows (Gratuito / Open Source) | Padrão mais utilizado no Brasil para validar a Árvore de Acessibilidade e leitura de formulários e tabelas. |
+| **Leitores de Tela** | **TalkBack** | Android (Nativo) | Validação da experiência tátil, gestual e de acessibilidade em dispositivos móveis. |
+| **Leitores de Tela** | **VoiceOver** | macOS / iOS (Nativo) | Avaliação em ecossistema Apple com comandos integrados de navegação estrutural. |
+| **Auditores de Código** | **axe-core / Axe DevTools** | Biblioteca JavaScript / Extensão Chrome | Motor internacional de inspeção semântica com taxa de falsos positivos próxima de zero (Deque Systems). |
+| **Auditores de Código** | **WAVE** | Extensão Web / WebAIM | Avaliação visual imediata de contraste, ordem de cabeçalhos, rótulos de formulário e ausência de atributos `alt`. |
+| **Auditores de Código** | **Google Lighthouse** | Chrome DevTools (Nativo) | Pontuação padronizada de acessibilidade, auditoria de contraste e conformidade com boas práticas web. |
+| **Nacionais / Oficiais** | **ASES** | Web / Governo Federal do Brasil | Avaliador e Simulador de Acessibilidade em Sítios governamentais conforme o e-MAG. |
+| **Nacionais / Oficiais** | **VLibras** | Extensão / Widget Governamental | Tradução automática de conteúdo textual da Língua Portuguesa para LIBRAS (Língua Brasileira de Sinais). |
+| **Contraste e Cor** | **WebAIM Contrast Checker** | Web | Verificação matemática da razão de contraste em texto normal ($\ge 4,5:1$) e texto grande/componentes ($\ge 3:1$). |
+| **Contraste e Cor** | **Color Oracle** | Desktop (Multiplataforma) | Simulador de acromatopsia, deuteranopia, protanopia e tritanopia em tempo real. |
+| **Métricas Empíricas** | **System Usability Scale (SUS)** | Escala Padronizada (Brooke, 1996) | Questionário psicométrico de 10 itens com pontuação de 0 a 100 pontos para mensuração de usabilidade percebida. |
+
+---
+
+## 3. O Pocket Checklist de Acessibilidade Digital (127 Itens)
+
+### 3.1 Classe 1: Desenvolvimento, Semântica e Testes
 
 - [ ] Usar um título (`<title>`) único e descritivo em cada página para identificar onde o usuário está no site (*ABNT NBR 17225; WCAG 2.2 C.S. 2.4.2 - Nível A*).
 - [ ] Declarar o idioma principal na tag raiz (`<html lang="...">`) e identificar programaticamente os trechos do texto que estiverem em idiomas estrangeiros (*ABNT NBR 17225; WCAG 2.2 C.S. 3.1.1 - Nível A e 3.1.2 - Nível AA*).
@@ -45,7 +162,7 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## 2. Privacidade, Segurança e Controle de Tempo
+### 3.2 Classe 2: Privacidade, Segurança e Controle de Tempo
 
 - [ ] Projetar fluxos que não tenham limite de tempo na sessão, a menos que sejam eventos em tempo real ou mídias sincronizadas (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.1 - Nível A e 2.2.3 - Nível AAA*).
 - [ ] Se a tela tiver limite de tempo, oferecer ao usuário a opção de desativá-lo, ajustá-lo em até 10x ou prorrogá-lo mediante aviso prévio de 20 segundos por meio de uma ação simples (*ABNT NBR 17225; WCAG 2.2 C.S. 2.2.1 - Nível A*).
@@ -64,7 +181,7 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## 3. Navegação, Foco e Interação
+### 3.3 Classe 3: Navegação, Foco e Interação
 
 - [ ] Garantir que 100% das funções interativas do site sejam alcançáveis e operáveis exclusivamente pelo uso do teclado (*Guia do Reino Unido; ABNT NBR 17225; WCAG 2.2 C.S. 2.1.1 - Nível A e 2.1.3 - Nível AAA*).
 - [ ] Fazer com que o foco de navegação (`tabindex`) passe apenas por elementos interativos, respeitando uma ordem sequencial e lógica na interface (*Guia do Reino Unido; ABNT NBR 17225; WCAG 2.2 C.S. 2.4.3 - Nível A*).
@@ -95,7 +212,7 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## 4. Conteúdo, Linguagem e Mídia
+### 3.4 Classe 4: Conteúdo, Linguagem e Mídia
 
 - [ ] Tratar o público com a terminologia correta: use "Pessoa com deficiência (PcD)" ou especifique a condição (pessoa cega, surda, autista, cadeirante), abolindo completamente o uso da palavra "portador" (*Guia do Reino Unido; LBI*).
 - [ ] Escrever adotando os princípios de Linguagem Simples (ISO 24495-1): frases curtas (15 a 20 palavras), ordem direta, pontuação clara e sem uso de ambiguidades ou figuras de linguagem rebuscadas (*Guia do Reino Unido; ABNT NBR 17225*).
@@ -123,7 +240,7 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## 5. Design, Tipografia e Layout Responsivo
+### 3.5 Classe 5: Design, Tipografia e Layout Responsivo
 
 - [ ] Assegurar a responsividade do layout em larguras bem pequenas (como 320px CSS) sem cortar conteúdos e sem forçar o usuário a rolar a página vertical e horizontalmente ao mesmo tempo (*ABNT NBR 17225; WCAG 2.2 C.S. 1.4.10 - Nível AA*).
 - [ ] Não bloquear a tela do celular em uma única orientação; o design deve fluir livremente caso o usuário gire o aparelho para modo retrato ou paisagem (*Guia do Reino Unido; ABNT NBR 17225; WCAG 2.2 C.S. 1.3.4 - Nível AA*).
@@ -146,7 +263,7 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## 6. Formulários e Prevenção de Falhas
+### 3.6 Classe 6: Formulários e Prevenção de Falhas
 
 - [ ] Planejar formulários curtos e objetivos que sempre tenham um botão explícito para enviar os dados, evitando disparos automáticos ou mudanças inesperadas ao digitar (*Guia do Reino Unido; ABNT NBR 17225; WCAG 2.2 C.S. 3.2.2 - Nível A*).
 - [ ] Conectar tecnicamente os campos de preenchimento (`<input>`) aos seus textos de identificação (`<label>`) e posicioná-los lado a lado no layout (*ABNT NBR 17225; WCAG 2.2 C.S. 1.3.1 - Nível A, 3.3.2 - Nível A e 4.1.2 - Nível A*).
@@ -163,7 +280,7 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## 7. Jornada do Usuário (User Journey) e Fluxos de Navegação (User Flow)
+### 3.7 Classe 7: Jornada do Usuário (User Journey) e Fluxos de Navegação (User Flow)
 
 - [ ] Dividir tarefas longas ou complexas em etapas menores e sequenciais (divulgação progressiva / *progressive disclosure*), informando sempre de forma visual e em texto em qual etapa o usuário está (ex: "Passo 2 de 4").
 - [ ] Fornecer orientações prévias antes de iniciar fluxos exigentes (como preencher um cadastro longo), informando de antemão o tempo estimado e quais documentos ou informações serão necessários.
@@ -177,27 +294,27 @@ Nosso guia foi montado com base em três documentos principais que se complement
 
 ---
 
-## Entendendo os "Porquês" (Justificativas Práticas do Checklist)
+## 4. Entendendo os "Porquês" (Justificativas Práticas do Checklist)
 
 Abaixo, detalhamos o motivo de cada bloco do checklist existir, explicando o impacto real na vida de quem usa o sistema e a base normativa que sustenta essas exigências. A acessibilidade universal é um direito e sua aplicação prática garante que a tecnologia sirva a todos com autonomia.
 
-### 1. Desenvolvimento, Semântica e Testes
+### 4.1 Classe 1: Desenvolvimento, Semântica e Testes
 O código HTML é a verdadeira ponte de acesso das tecnologias assistivas. Se ele for montado com improvisos visuais (como o uso crônico de `<div>` para montar barras ou botões), a página se torna uma muralha invisível. Elementos nativos do HTML (`<button>`, `<a>`) e regiões bem delimitadas por landmarks (`nav`, `main`) permitem que uma pessoa cega, por exemplo, "pule" direto para a área que lhe interessa usando atalhos do leitor de tela, não precisando escutar a narração do menu superior todas as vezes. E vale ressaltar: ferramentas automáticas pegam no máximo 30% das falhas reais, motivo pelo qual a norma obriga a testagem humana em diferentes aparelhos e, principalmente, ouvindo quem de fato convive com a deficiência.
 
-### 2. Privacidade, Segurança e Controle de Tempo
+### 4.2 Classe 2: Privacidade, Segurança e Controle de Tempo
 Sessões com cronômetros curtos e inajustáveis são uma barreira cruel. Elas excluem automaticamente idosos, pessoas com espasmos motores, usuários com dislexia e indivíduos neurodivergentes, que tendem a precisar de mais tempo para absorver o que está na tela e digitar os dados de volta. Encerrar uma sessão repentinamente sem reter as respostas apaga a jornada e frustra qualquer ser humano. Isso também se aplica a barreiras na entrada: exigir que a pessoa resolva quebra-cabeças visuais (como um CAPTCHA onde deve-se reconhecer semáforos) proíbe quem não enxerga ou tem baixa cognição de sequer acessar os serviços da plataforma.
 
-### 3. Navegação, Foco e Interação
+### 4.3 Classe 3: Navegação, Foco e Interação
 Devemos assumir, de partida, que o mouse não é a única forma de interagir com o computador. O sistema deve fluir com naturalidade apenas pelo teclado. Nesse contexto, se a borda ao redor dos itens (o "foco visível") for tênue ou inexistente, é como se a pessoa navegasse às cegas na tela. Componentes complexos que aprisionam a navegação (modais problemáticas que geram "armadilhas de teclado") são o terror de quem não usa apontador físico. Interações que peçam gestos elaborados demais no celular (como deslizar com dois dedos ou inclinar o aparelho) também bloqueiam cadeirantes ou pessoas com limitações severas de movimento fino.
 
-### 4. Conteúdo, Linguagem e Mídia
+### 4.4 Classe 4: Conteúdo, Linguagem e Mídia
 A comunicação tem a obrigação de ser fácil de perceber. Em uma internet saturada por mídias, vídeos sem legenda privam as pessoas surdas da informação, assim como vídeos ausentes de audiodescrição e imagens vitais postadas sem texto alternativo (`alt`) segregam os usuários com deficiência visual. Pelo lado cognitivo, interfaces com textos carregados de jargão jurídico, jargão tecnológico ou áudios e banners incontroláveis causam esgotamento e desvio de foco severos para quem possui TDAH, além de ofuscarem o próprio leitor de tela do usuário. Finalmente, piscar cores vibrantes rapidamente é terminantemente vetado pela legislação, dado o potencial letal de desencadear crises de epilepsia fotossensível.
 
-### 5. Design, Tipografia e Layout Responsivo
+### 4.5 Classe 5: Design, Tipografia e Layout Responsivo
 A excelência visual respeita e engloba as customizações do próprio navegador do usuário. Se a arquitetura CSS quebrar, sobrepor informações ou exigir rolagem para o lado apenas porque uma pessoa com baixa visão ativou um zoom de 200%, a acessibilidade falhou. Na pintura das telas, a paleta de cores não pode carregar sozinha a responsabilidade de passar mensagens de falha ou sucesso; os índices de daltonismo tornam o uso de texturas e ícones adicionais essencial. Contrastes firmes e fontes arredondadas com bom tamanho, desenhadas com áreas de clique generosas para quem tem tremores na mão, demonstram a maturidade de um design centrado nas realidades do corpo humano, e não em meras tendências estéticas.
 
-### 6. Formulários e Prevenção de Falhas
+### 4.6 Classe 6: Formulários e Prevenção de Falhas
 Na arquitetura da informação, os formulários são os grandes gargalos de erro na navegação. Eliminar os antigos placeholders (a dica em cinza fraco) e colocar o nome dos campos visualmente do lado de fora em um `<label>` resguarda a memória de curto prazo, já que o usuário não precisará apagar o que escreveu para lembrar o que o campo pedia. Quando o erro humano de preenchimento acontece, a máquina precisa usar empatia programada: apontar o erro visualmente de imediato, traduzir o problema de forma educada e sugerir a correção correta, conduzindo o foco de volta e preservando o esforço já dedicado na jornada. Transações sensíveis simplesmente precisam admitir revisão prévia para proteger pessoas de danos irreparáveis.
 
-### 7. Jornada do Usuário (User Journey) e Fluxos de Navegação (User Flow)
+### 4.7 Classe 7: Jornada do Usuário (User Journey) e Fluxos de Navegação (User Flow)
 Um fluxo mal desenhado não é apenas um problema de conversão comercial; é uma barreira cognitiva severa. Quando jogamos um formulário de 40 campos em uma única tela sem aviso prévio, causamos ansiedade e fadiga imediata, punindo especialmente usuários neurodivergentes (como pessoas com TDAH) e idosos. Ao quebrar tarefas complexas em passos curtos, permitir que o progresso seja salvo e projetar rotas de saída seguras ("Cancelar"), devolvemos o controle da máquina para o humano. O usuário precisa saber, a cada segundo, onde ele está, o que acabou de fazer, o que precisa fazer agora e para onde pode ir depois. Previsibilidade em uma interface não é tédio, é conforto e acessibilidade.
