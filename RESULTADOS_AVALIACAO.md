@@ -27,7 +27,7 @@ Este documento consolida em uma **única base integrada** todas as evidências o
    - Extração da camada de acessibilidade do Chromium (Chrome DevTools Protocol), simulando com precisão a estrutura entregue aos leitores de tela (**NVDA**, **TalkBack** e **JAWS**) para mapear os nomes acessíveis computados, papéis (*roles*) e alertas.
 3. **Avaliação Empírica com Usuários Reais (Testes de Usabilidade):**
    - **Participante 1 (P1):** Mulher, 48 anos, com problemas de vista / baixa visão (presbiopia severa) e necessidade de ampliação e zoom.
-   - **Participante 2 (P2):** Homem, 21 anos, com limitação motora (**Tremor Essencial**).
+   - **Participante 2 (P2):** Homem, 20 anos, com limitação motora (**Tremor Essencial**).
    - Aplicação de protocolo de pensamento em voz alta (*think-aloud*), tarefas de denúncia anônima e questionário padronizado **SUS (System Usability Scale)**.
 
 ---
@@ -135,7 +135,7 @@ Este documento consolida em uma **única base integrada** todas as evidências o
     - **Evidência:** Árvore de acessibilidade inspecionada nó a nó simulando a saída vocal de todos os botões e formulários.
 26. **Validar usabilidade dos fluxos com pessoas com diferentes deficiências**
     - **Status:** 🟢 **CONFORME (Realizado pelo Grupo com P1 e P2)**
-    - **Evidência:** Testes com P1 (48 anos, baixa visão) e P2 (21 anos, tremor essencial).
+    - **Evidência:** Testes com P1 (48 anos, baixa visão) e P2 (20 anos, tremor essencial).
 
 ---
 
@@ -482,7 +482,7 @@ Este documento consolida em uma **única base integrada** todas as evidências o
   - O tamanho padrão das letras é a principal barreira do portal (*"as letras precisava ser maior"*).
   - Ocorreu travamento da interface durante a tarefa 1 (*"Cliquei e não foi. Ixe, acho que tá meio travado"*).
   - Teve dificuldade de compreender as regras de anonimato pela falta de orientação prévia.
-- **P2 (21 anos, Tremor Essencial):**
+- **P2 (20 anos, Tremor Essencial):**
   - Os botões padronizados amplos (>44px) permitiram o clique confortável sem erro de alvo (*"Para mim foi confortável"*).
   - Criticou a falta de informações na página inicial, obrigando o usuário a *"sair clicando nas coisas para poder achar o que realmente quer"*.
 

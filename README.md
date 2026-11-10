@@ -43,7 +43,7 @@ Repositório dedicado ao estudo, sistematização e avaliação prática de aces
 ### 5. Pasta de Testes de Usuário e Entrevistas (`entrevistas/`)
 - **[Roteiro da Sessão de Teste de Usabilidade](./entrevistas/roteiro_entrevista.md)** (`roteiro_entrevista.md`): Protocolo completo de acolhida, entrevista inicial, tarefas guiadas (*think-aloud*), questionário SUS e encerramento.
 - **[Transcrição Participante 1](./entrevistas/transcricao_participante_1.md)** (`transcricao_participante_1.md`): Mulher, 48 anos, baixa visão / presbiopia severa (demanda ampliação e zoom).
-- **[Transcrição Participante 2](./entrevistas/transcricao_participante_2.md)** (`transcricao_participante_2.md`): Homem, 21 anos, com limitação motora (Tremor Essencial).
+- **[Transcrição Participante 2](./entrevistas/transcricao_participante_2.md)** (`transcricao_participante_2.md`): Homem, 20 anos, com limitação motora (Tremor Essencial).
 - **Termos de Consentimento Assinados (PDF):**
   - `Termo_Consentimento_Participante_1_assinado.pdf`
   - `Termo_Consentimento_Participante_2_assinado.pdf`

@@ -56,7 +56,7 @@ pie title Distribuição das 42 Falhas Críticas por Categoria
 Com base na minutagem cronometrada a partir dos vídeos gravados e no protocolo metodológico oficial de IHC (Rubin & Chisnell, 2008; Tullis & Albert, 2013):
 
 * **Participante 1 (P1):** Mulher, 48 anos, baixa visão / presbiopia severa (depende de aumento de letra e zoom).
-* **Participante 2 (P2):** Homem, 21 anos, limitação motora (Tremor Essencial). **Estratégia assistiva observada no vídeo: uso intensivo da tecla TAB no teclado para alternar campos e evitar cliques trêmulos com o mouse.**
+* **Participante 2 (P2):** Homem, 20 anos, limitação motora (Tremor Essencial). **Estratégia assistiva observada no vídeo: uso intensivo da tecla TAB no teclado para alternar campos e evitar cliques trêmulos com o mouse.**
 
 ### 3.1 Tabela Geral de Resultados por Tarefa
 
@@ -192,7 +192,7 @@ Para fundamentar o diagnóstico empírico em modelos mentais reais, estruturamos
 ---
 
 ### Persona 2: Lucas Ferreira — Tremor Essencial e Controle Motor Fino (Permanente / Motora)
-* **Demografia:** 21 anos, estudante universitário, alto domínio de tecnologias digitais e navegação web.
+* **Demografia:** 20 anos, estudante universitário, alto domínio de tecnologias digitais e navegação web.
 * **Tecnologias Assistivas / Estratégia de Navegação:** Apresenta Tremor Essencial de grau moderado nas mãos, o que dificulta cliques estáveis em alvos pequenos com mouse ou trackpad. **Estratégia assistiva primária: navegação intensiva por teclado via tecla `Tab` e teclas direcionais.**
 * **Objetivo no Fala.BR:** Denunciar uma irregularidade de forma 100% anônima e com a menor sobrecarga de cliques possível.
 * **Barreiras Reais Enfrentadas no Portal:**

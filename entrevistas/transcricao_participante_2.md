@@ -4,7 +4,7 @@
 **Duração:** 13 minutos e 16 segundos  
 **Link da Gravação em Vídeo:** [Gravação em Vídeo — Participante 2 (Google Drive)](https://drive.google.com/file/d/1g2Wuhr3AbpEhassPUMrLsV2r0oibk5Mq/view?usp=sharing)  
 **Entrevistador:** Entrevistador  
-**Perfil do Participante:** Participante 2 (Homem, 21 anos, com limitação motora: Tremor Essencial)  
+**Perfil do Participante:** Participante 2 (Homem, 20 anos, com limitação motora: Tremor Essencial)  
 **Documento de Consentimento:** [`Termo_Consentimento_Participante_2_assinado.pdf`](./Termo_Consentimento_Participante_2_assinado.pdf)
 
 ---

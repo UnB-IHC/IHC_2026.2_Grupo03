@@ -24,7 +24,7 @@ Em consonância com as recomendações da **Seção 2.2 da proposta de trabalho*
   * **Vínculo Acadêmico:** Não estuda na UnB, não cursa a disciplina e não possui vínculo com os integrantes do grupo.
 
 * **Participante 2 (P2 — Análise Complementar de Controle):**
-  * **Idade:** 21 anos.
+  * **Idade:** 20 anos.
   * **Gênero:** Masculino.
   * **Perfil Funcional:** Limitação motora nos membros superiores (Tremor Essencial); utiliza navegação híbrida compensatória com mouse e **uso intensivo da tecla TAB no teclado** para evitar cliques falso-positivos em áreas pequenas.
   * **Uso da Internet:** Diário (pesquisa, entretenimento e estudos).
