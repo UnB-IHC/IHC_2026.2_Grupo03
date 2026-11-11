@@ -11,41 +11,41 @@ Esta análise consolida os dados obtidos na avaliação técnica do portal Fala.
 
 A combinação entre a inspeção técnica de código, a árvore de acessibilidade (simulação de leitores de tela) e os testes práticos com usuários revelou que o Fala.BR possui um comportamento assimétrico: visualmente é padronizado e espaçoso, mas esconde dificuldades severas na camada de teclado, na semântica do código, no tamanho de fonte para baixa visão e na ausência de informações essenciais na tela inicial.
 
-### Distribuição Geral do Checklist (Total: 127 Itens)
+### Distribuição Geral do Checklist (Total: 128 Itens)
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#2e7d32', 'pie2': '#c62828', 'pie3': '#f57f17', 'pie4': '#78909c', 'pieSectionTextColor': '#ffffff', 'pieLegendTextColor': '#212121', 'pieStrokeColor': '#ffffff', 'pieStrokeWidth': '2px'}}}%%
-pie title Distribuição Geral do Checklist (127 Itens)
-    "Conforme (38,6%)" : 49
-    "Não Conforme (33,1%)" : 42
-    "Parcialmente Conforme (12,6%)" : 16
-    "Não se Aplica ao Portal (15,7%)" : 20
+pie title Distribuição Geral do Checklist (128 Itens)
+    "Conforme (39,8%)" : 51
+    "Não Conforme (31,2%)" : 40
+    "Parcialmente Conforme (11,7%)" : 15
+    "Não se Aplica ao Portal (17,2%)" : 22
 ```
 
-| Status da Diretriz | Quantidade | Proporção sobre o Total (127 Itens) | Proporção sobre Itens Aplicáveis (107 Itens) |
+| Status da Diretriz | Quantidade | Proporção sobre o Total (128 Itens) | Proporção sobre Itens Aplicáveis (106 Itens) |
 | :--- | :---: | :---: | :---: |
-| 🟢 **Conforme** | **49** | `38,6%` | `45,8%` |
-| 🔴 **Não Conforme** | **42** | `33,1%` | `39,3%` |
-| 🟡 **Parcialmente Conforme** | **16** | `12,6%` | `15,0%` |
-| ⚪ **Não se Aplica ao Portal** | **20** | `15,7%` | *Desconsiderado* |
+| 🟢 **Conforme** | **51** | `39,8%` | `48,1%` |
+| 🔴 **Não Conforme** | **40** | `31,2%` | `37,7%` |
+| 🟡 **Parcialmente Conforme** | **15** | `11,7%` | `14,2%` |
+| ⚪ **Não se Aplica ao Portal** | **22** | `17,2%` | *Desconsiderado* |
 
-> **Nota:** Desconsiderando os 20 itens que tratam de recursos ausentes no escopo (como áudios nativos, vídeos, biometria e tabelas complexas), **54,2% das diretrizes aplicáveis (58 de 107 itens)** apresentam falhas totais ou parciais de acessibilidade.
+> **Nota:** Desconsiderando os 22 itens que tratam de recursos ausentes no escopo (como áudios nativos, vídeos, biometria e tabelas complexas), **51,9% das diretrizes aplicáveis (55 de 106 itens)** apresentam falhas totais ou parciais de acessibilidade.
 
 ---
 
 ## 2. Distribuição das Falhas Críticas por Categoria
 
-Nem todas as áreas do site apresentam os mesmos desafios. Abaixo, vemos como as **42 reprovações diretas (Não Conforme)** estão distribuídas entre as grandes classes avaliadas:
+Nem todas as áreas do site apresentam os mesmos desafios. Abaixo, vemos como as **40 reprovações diretas (Não Conforme)** estão distribuídas entre as grandes classes avaliadas:
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#b71c1c', 'pie2': '#d32f2f', 'pie3': '#f44336', 'pie4': '#e57373', 'pie5': '#ef9a9a', 'pie6': '#ffcdd2', 'pie7': '#ffebee', 'pieSectionTextColor': '#111111', 'pieLegendTextColor': '#212121', 'pieStrokeColor': '#ffffff', 'pieStrokeWidth': '2px'}}}%%
-pie title Distribuição das 42 Falhas Críticas por Categoria
-    "Navegação e Foco (12)" : 12
+pie title Distribuição das 40 Falhas Críticas por Categoria
+    "Navegação e Foco (11)" : 11
     "Desenvolvimento e Semântica (11)" : 11
-    "Conteúdo e Linguagem (5)" : 5
-    "Formulários e Erros (5)" : 5
+    "Formulários e Erros (6)" : 6
     "Privacidade e Tempo (4)" : 4
-    "Design e Tipografia (3)" : 3
+    "Design e Tipografia (4)" : 4
+    "Conteúdo e Linguagem (2)" : 2
     "Jornada e Fluxos (2)" : 2
 ```
 

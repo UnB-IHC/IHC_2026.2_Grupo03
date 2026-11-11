@@ -12,15 +12,15 @@ Repositório dedicado ao estudo, sistematização e avaliação prática de aces
   - **Fundamentos de IHC e UX:** Personas inclusivas e Espectro de Habilidades, Design Empático e Mapa de Empatia, Service Blueprint (5 camadas integradas à jornada), Canvas de IHC / UX Canvas;
   - **As 10 Heurísticas de Usabilidade de Nielsen** aplicadas à acessibilidade;
   - **Catálogo de Ferramentas:** Leitores de tela (NVDA, TalkBack, VoiceOver), validadores (axe-core, WAVE, Lighthouse, ASES, VLibras), simuladores de cor e escala SUS;
-  - **Pocket Checklist Normativo:** 127 itens distribuídos em 7 classes temáticas e a seção completa de *"Entendendo os Porquês"*.
+  - **Pocket Checklist Normativo:** 128 itens distribuídos em 7 classes temáticas e a seção completa de *"Entendendo os Porquês"*.
 
 ### 2. [Resultados da Avaliação Macro e Micro — Portal Fala.BR](./RESULTADOS_AVALIACAO.md) (`RESULTADOS_AVALIACAO.md`)
 - **Visão Macro:** Painel executivo consolidado com percentuais e distribuição por classes de conformidade (testes automatizados, testes com usuários e testes de código).
-- **Visão Micro:** Avaliação individual e detalhada passando por **cada um dos 127 checks**, acompanhado de evidências técnicas, comportamento na Árvore de Acessibilidade (*Accessibility Tree*), diagnóstico dos 6 passos do formulário e restrições éticas de produção.
+- **Visão Micro:** Avaliação individual e detalhada passando por **cada um dos 128 checks**, acompanhado de evidências técnicas, comportamento na Árvore de Acessibilidade (*Accessibility Tree*), diagnóstico dos 6 passos do formulário e restrições éticas de produção.
 
 ### 3. [Análise de Dados, Gráficos e Métodos de IHC — Fala.BR](./ANALISE_DADOS_ACESSIBILIDADE.md) (`ANALISE_DADOS_ACESSIBILIDADE.md`)
 - Análise quantitativa e qualitativa sintetizada de forma leve e direta, integrando:
-  - **Gráficos e Indicadores:** Distribuição do checklist (45,8% conforme em itens aplicáveis) e decomposição das falhas críticas;
+  - **Gráficos e Indicadores:** Distribuição do checklist (48,1% conforme em itens aplicáveis) e decomposição das falhas críticas;
   - **Métricas Empíricas de Testes:** Cronometragem por tarefa (P1 — Baixa Visão vs. P2 — Tremor Essencial) e escore SUS (68,75 pontos);
   - **Personas Inclusivas do Fala.BR:** Maria Helena (Baixa Visão) e Lucas Ferreira (Tremor Essencial);
   - **Mapa de Empatia:** Mapeamento sensorial e emocional da interação com o Fala.BR;

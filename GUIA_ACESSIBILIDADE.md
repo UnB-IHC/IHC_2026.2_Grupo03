@@ -4,7 +4,7 @@
 **Disciplina:** Interação Humano-Computador (IHC 2026.2) — Universidade de Brasília (UnB)  
 **Grupo 03**
 
-Criar um ambiente digital verdadeiramente inclusivo exige mais do que inspecionar tags HTML: exige entender em profundidade as barreiras tecnológicas, cognitivas, sensoriais e motoras que milhões de cidadãos enfrentam cotidianamente. Este guia unifica os fundamentos de **Interação Humano-Computador (IHC)**, **User Experience (UX)**, as **10 Heurísticas de Usabilidade de Nielsen**, ferramentas de auditoria e o **Pocket Checklist Normativo de 127 Itens**, tratando a acessibilidade como pilar estrutural e ético do projeto de software.
+Criar um ambiente digital verdadeiramente inclusivo exige mais do que inspecionar tags HTML: exige entender em profundidade as barreiras tecnológicas, cognitivas, sensoriais e motoras que milhões de cidadãos enfrentam cotidianamente. Este guia unifica os fundamentos de **Interação Humano-Computador (IHC)**, **User Experience (UX)**, as **10 Heurísticas de Usabilidade de Nielsen**, ferramentas de auditoria e o **Pocket Checklist Normativo de 128 Itens**, tratando a acessibilidade como pilar estrutural e ético do projeto de software.
 
 ---
 
@@ -129,7 +129,7 @@ As clássicas heurísticas de Jakob Nielsen (1994) ganham contornos indispensáv
 
 ---
 
-## 3. O Pocket Checklist de Acessibilidade Digital (127 Itens)
+## 3. O Pocket Checklist de Acessibilidade Digital (128 Itens)
 
 ### 3.1 Classe 1: Desenvolvimento, Semântica e Testes
 
